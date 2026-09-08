@@ -45,8 +45,9 @@ export async function listGames(
   f: Filters,
   limit = 100,
   offset = 0,
+  pair = false,
 ) {
-  const condition = f.players.length
+  const condition = pair && f.players.length===2 ? " AND EXISTS (SELECT 1 FROM participants a JOIN participants b ON a.game_id=b.game_id AND a.team=b.team WHERE a.game_id=games.id AND a.player_id=? AND b.player_id=?)" : f.players.length
     ? ` AND EXISTS (SELECT 1 FROM participants p WHERE p.game_id=games.id AND p.player_id IN (${f.players.map(() => "?").join(",")}))`
     : "";
   const r = await db

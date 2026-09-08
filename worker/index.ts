@@ -106,7 +106,7 @@ async function route(
       Math.min(100, Number(url.searchParams.get("limit")) || 30),
     );
     const offset = Math.max(0, Number(url.searchParams.get("offset")) || 0);
-    return json(await listGames(env.DB, filters(url), limit, offset));
+    return json(await listGames(env.DB, filters(url), limit, offset, url.searchParams.get("pair")==="1"));
   }
   if (method === "GET" && /^\/games\/[^/]+\/events$/.test(path)) {
     const id = decodeURIComponent(path.split("/")[2]);

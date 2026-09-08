@@ -186,7 +186,8 @@ export default function App() {
       ? Promise.resolve(demoSnapshot(filters))
       : request<Snapshot>(`/snapshot?${qs(filters)}`)
     )
-      .then((d) => {
+      .then(async (d) => {
+        if (pairGames && !demo && filters.players.length===2) d.games=await request<Snapshot["games"]>(`/games?${qs(filters)}&pair=1&limit=100`);
         if (!cancel) {
           setData(d);
           setStatus("ready");
@@ -202,7 +203,7 @@ export default function App() {
     return () => {
       cancel = true;
     };
-  }, [filters, demo, meta]);
+  }, [filters, demo, meta, pairGames]);
   useEffect(() => {
     if (!filters.from) return;
     const p = new URLSearchParams({
@@ -245,6 +246,7 @@ export default function App() {
     document.addEventListener("keydown", esc);
     return () => document.removeEventListener("keydown", esc);
   }, []);
+  async function loadOlderGames(){if(!data||demo)return;try{const next=await request<Snapshot["games"]>(`/games?${qs(filters)}&limit=100&offset=${data.games.length}${pairGames?"&pair=1":""}`);setData(d=>d?{...d,games:[...d.games,...next]}:d)}catch(e){setError((e as Error).message)}}
   function changeTab(next: string) {
     setTab(next);
     setSort(next === "defense" ? "steals" : "points");
@@ -1307,6 +1309,7 @@ export default function App() {
                         <ArrowUpRight size={16} />
                       </button>
                     ))}
+                  {!demo && data.games.length < (pairGames?.length ?? data.totalGames) && <button className="secondary" style={{margin:20}} onClick={loadOlderGames}>Load older games</button>}
                   {!data.games.length && (
                     <div className="empty">
                       No games yet. The owner can publish the first session in
