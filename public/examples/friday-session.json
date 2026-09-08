@@ -1,0 +1,4125 @@
+{
+  "schema_version": 1,
+  "session": {
+    "id": "friday-2026-09-04",
+    "date": "2026-09-04",
+    "label": "Friday run"
+  },
+  "players": [
+    {
+      "id": "kai",
+      "name": "Kai Chen",
+      "aliases": [
+        "Kai"
+      ]
+    },
+    {
+      "id": "alex",
+      "name": "Alex Wong",
+      "aliases": [
+        "Alex"
+      ]
+    },
+    {
+      "id": "sam",
+      "name": "Sam Lee",
+      "aliases": [
+        "Sam"
+      ]
+    },
+    {
+      "id": "jordan",
+      "name": "Jordan Ho",
+      "aliases": [
+        "Jordan"
+      ]
+    },
+    {
+      "id": "marcus",
+      "name": "Marcus Lau",
+      "aliases": [
+        "Marcus"
+      ]
+    },
+    {
+      "id": "ryan",
+      "name": "Ryan Lam",
+      "aliases": [
+        "Ryan"
+      ]
+    },
+    {
+      "id": "dan",
+      "name": "Dan Wu",
+      "aliases": [
+        "Dan"
+      ]
+    },
+    {
+      "id": "ash",
+      "name": "Ash Singh",
+      "aliases": [
+        "Ash"
+      ]
+    }
+  ],
+  "games": [
+    {
+      "id": "friday-2026-09-04-g1",
+      "label": "Game 1",
+      "base_revision": 0,
+      "completed": true,
+      "scoring_complete": true,
+      "coverage": {
+        "shooting": true,
+        "assists": true,
+        "oreb": true,
+        "turnovers": true,
+        "defense": true,
+        "deflections": true,
+        "steals": true,
+        "blocks": true,
+        "dreb": true
+      },
+      "roster": [
+        {
+          "id": "kai",
+          "player_id": "kai",
+          "outsider": false,
+          "team": "A"
+        },
+        {
+          "id": "alex",
+          "player_id": "alex",
+          "outsider": false,
+          "team": "A"
+        },
+        {
+          "id": "sam",
+          "player_id": "sam",
+          "outsider": false,
+          "team": "A"
+        },
+        {
+          "id": "jordan",
+          "player_id": "jordan",
+          "outsider": false,
+          "team": "A"
+        },
+        {
+          "id": "marcus",
+          "player_id": "marcus",
+          "outsider": false,
+          "team": "B"
+        },
+        {
+          "id": "ryan",
+          "player_id": "ryan",
+          "outsider": false,
+          "team": "B"
+        },
+        {
+          "id": "dan",
+          "player_id": "dan",
+          "outsider": false,
+          "team": "B"
+        },
+        {
+          "id": "ash",
+          "player_id": "ash",
+          "outsider": false,
+          "team": "B"
+        }
+      ],
+      "events": [
+        {
+          "type": "shot",
+          "actor": "jordan",
+          "value": 2,
+          "made": true,
+          "assist": "sam",
+          "defenders": [
+            "dan"
+          ],
+          "video_seconds": 0,
+          "id": "e1",
+          "sequence": 1
+        },
+        {
+          "type": "shot",
+          "actor": "marcus",
+          "value": 2,
+          "made": true,
+          "defenders": [],
+          "video_seconds": 23,
+          "id": "e2",
+          "sequence": 2
+        },
+        {
+          "type": "shot",
+          "actor": "jordan",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "ash"
+          ],
+          "video_seconds": 46,
+          "id": "e3",
+          "sequence": 3
+        },
+        {
+          "type": "dreb",
+          "actor": "ash",
+          "related_event_id": "e3",
+          "defenders": [],
+          "id": "e4",
+          "sequence": 4
+        },
+        {
+          "type": "deflection",
+          "actor": "ash",
+          "defenders": [],
+          "id": "e5",
+          "sequence": 5
+        },
+        {
+          "type": "shot",
+          "actor": "ash",
+          "value": 3,
+          "made": false,
+          "defenders": [
+            "alex"
+          ],
+          "video_seconds": 69,
+          "id": "e6",
+          "sequence": 6
+        },
+        {
+          "type": "block",
+          "actor": "alex",
+          "related_event_id": "e6",
+          "defenders": [],
+          "id": "e7",
+          "sequence": 7
+        },
+        {
+          "type": "dreb",
+          "actor": "alex",
+          "related_event_id": "e6",
+          "defenders": [],
+          "id": "e8",
+          "sequence": 8
+        },
+        {
+          "type": "turnover",
+          "actor": "ash",
+          "defenders": [],
+          "id": "e9",
+          "sequence": 9
+        },
+        {
+          "type": "shot",
+          "actor": "dan",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "sam"
+          ],
+          "video_seconds": 92,
+          "id": "e10",
+          "sequence": 10
+        },
+        {
+          "type": "dreb",
+          "actor": "sam",
+          "related_event_id": "e10",
+          "defenders": [],
+          "id": "e11",
+          "sequence": 11
+        },
+        {
+          "type": "shot",
+          "actor": "ryan",
+          "value": 2,
+          "made": true,
+          "assist": "marcus",
+          "defenders": [
+            "kai",
+            "alex"
+          ],
+          "video_seconds": 115,
+          "id": "e12",
+          "sequence": 12
+        },
+        {
+          "type": "shot",
+          "actor": "kai",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "ash"
+          ],
+          "video_seconds": 138,
+          "id": "e13",
+          "sequence": 13
+        },
+        {
+          "type": "dreb",
+          "actor": "ash",
+          "related_event_id": "e13",
+          "defenders": [],
+          "id": "e14",
+          "sequence": 14
+        },
+        {
+          "type": "shot",
+          "actor": "marcus",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "sam"
+          ],
+          "video_seconds": 161,
+          "id": "e15",
+          "sequence": 15
+        },
+        {
+          "type": "oreb",
+          "actor": "ryan",
+          "related_event_id": "e15",
+          "defenders": [],
+          "id": "e16",
+          "sequence": 16
+        },
+        {
+          "type": "turnover",
+          "actor": "marcus",
+          "defenders": [],
+          "id": "e17",
+          "sequence": 17
+        },
+        {
+          "type": "steal",
+          "actor": "sam",
+          "related_event_id": "e17",
+          "defenders": [],
+          "id": "e18",
+          "sequence": 18
+        },
+        {
+          "type": "shot",
+          "actor": "sam",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "ryan"
+          ],
+          "video_seconds": 184,
+          "id": "e19",
+          "sequence": 19
+        },
+        {
+          "type": "dreb",
+          "actor": "ryan",
+          "related_event_id": "e19",
+          "defenders": [],
+          "id": "e20",
+          "sequence": 20
+        },
+        {
+          "type": "turnover",
+          "actor": "sam",
+          "defenders": [],
+          "id": "e21",
+          "sequence": 21
+        },
+        {
+          "type": "steal",
+          "actor": "ryan",
+          "related_event_id": "e21",
+          "defenders": [],
+          "id": "e22",
+          "sequence": 22
+        },
+        {
+          "type": "shot",
+          "actor": "jordan",
+          "value": 3,
+          "made": false,
+          "defenders": [
+            "marcus",
+            "ryan"
+          ],
+          "video_seconds": 207,
+          "id": "e23",
+          "sequence": 23
+        },
+        {
+          "type": "block",
+          "actor": "marcus",
+          "related_event_id": "e23",
+          "defenders": [],
+          "id": "e24",
+          "sequence": 24
+        },
+        {
+          "type": "oreb",
+          "actor": "alex",
+          "related_event_id": "e23",
+          "defenders": [],
+          "id": "e25",
+          "sequence": 25
+        },
+        {
+          "type": "turnover",
+          "actor": "jordan",
+          "defenders": [],
+          "id": "e26",
+          "sequence": 26
+        },
+        {
+          "type": "steal",
+          "actor": "marcus",
+          "related_event_id": "e26",
+          "defenders": [],
+          "id": "e27",
+          "sequence": 27
+        },
+        {
+          "type": "shot",
+          "actor": "kai",
+          "value": 2,
+          "made": true,
+          "defenders": [
+            "ash"
+          ],
+          "video_seconds": 230,
+          "id": "e28",
+          "sequence": 28
+        },
+        {
+          "type": "shot",
+          "actor": "kai",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "dan"
+          ],
+          "video_seconds": 253,
+          "id": "e29",
+          "sequence": 29
+        },
+        {
+          "type": "oreb",
+          "actor": "alex",
+          "related_event_id": "e29",
+          "defenders": [],
+          "id": "e30",
+          "sequence": 30
+        },
+        {
+          "type": "shot",
+          "actor": "sam",
+          "value": 3,
+          "made": false,
+          "defenders": [
+            "marcus"
+          ],
+          "video_seconds": 276,
+          "id": "e31",
+          "sequence": 31
+        },
+        {
+          "type": "dreb",
+          "actor": "marcus",
+          "related_event_id": "e31",
+          "defenders": [],
+          "id": "e32",
+          "sequence": 32
+        },
+        {
+          "type": "shot",
+          "actor": "sam",
+          "value": 3,
+          "made": true,
+          "defenders": [
+            "dan"
+          ],
+          "video_seconds": 299,
+          "id": "e33",
+          "sequence": 33
+        },
+        {
+          "type": "shot",
+          "actor": "kai",
+          "value": 3,
+          "made": true,
+          "assist": "sam",
+          "defenders": [
+            "ryan"
+          ],
+          "video_seconds": 322,
+          "id": "e34",
+          "sequence": 34
+        },
+        {
+          "type": "shot",
+          "actor": "ryan",
+          "value": 2,
+          "made": true,
+          "assist": "ash",
+          "defenders": [
+            "alex",
+            "kai"
+          ],
+          "video_seconds": 345,
+          "id": "e35",
+          "sequence": 35
+        },
+        {
+          "type": "shot",
+          "actor": "sam",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "dan"
+          ],
+          "video_seconds": 368,
+          "id": "e36",
+          "sequence": 36
+        },
+        {
+          "type": "dreb",
+          "actor": "dan",
+          "related_event_id": "e36",
+          "defenders": [],
+          "id": "e37",
+          "sequence": 37
+        },
+        {
+          "type": "shot",
+          "actor": "jordan",
+          "value": 2,
+          "made": true,
+          "assist": "alex",
+          "defenders": [],
+          "video_seconds": 391,
+          "id": "e38",
+          "sequence": 38
+        },
+        {
+          "type": "shot",
+          "actor": "alex",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "dan"
+          ],
+          "video_seconds": 414,
+          "id": "e39",
+          "sequence": 39
+        },
+        {
+          "type": "dreb",
+          "actor": "dan",
+          "related_event_id": "e39",
+          "defenders": [],
+          "id": "e40",
+          "sequence": 40
+        },
+        {
+          "type": "turnover",
+          "actor": "alex",
+          "defenders": [],
+          "id": "e41",
+          "sequence": 41
+        },
+        {
+          "type": "steal",
+          "actor": "dan",
+          "related_event_id": "e41",
+          "defenders": [],
+          "id": "e42",
+          "sequence": 42
+        },
+        {
+          "type": "shot",
+          "actor": "ryan",
+          "value": 3,
+          "made": true,
+          "assist": "marcus",
+          "defenders": [],
+          "video_seconds": 437,
+          "id": "e43",
+          "sequence": 43
+        },
+        {
+          "type": "shot",
+          "actor": "ryan",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "kai"
+          ],
+          "video_seconds": 460,
+          "id": "e44",
+          "sequence": 44
+        },
+        {
+          "type": "dreb",
+          "actor": "kai",
+          "related_event_id": "e44",
+          "defenders": [],
+          "id": "e45",
+          "sequence": 45
+        },
+        {
+          "type": "turnover",
+          "actor": "ryan",
+          "defenders": [],
+          "id": "e46",
+          "sequence": 46
+        },
+        {
+          "type": "steal",
+          "actor": "kai",
+          "related_event_id": "e46",
+          "defenders": [],
+          "id": "e47",
+          "sequence": 47
+        },
+        {
+          "type": "shot",
+          "actor": "dan",
+          "value": 3,
+          "made": true,
+          "assist": "marcus",
+          "defenders": [
+            "jordan"
+          ],
+          "video_seconds": 483,
+          "id": "e48",
+          "sequence": 48
+        },
+        {
+          "type": "shot",
+          "actor": "dan",
+          "value": 3,
+          "made": false,
+          "defenders": [
+            "jordan",
+            "kai"
+          ],
+          "video_seconds": 506,
+          "id": "e49",
+          "sequence": 49
+        },
+        {
+          "type": "dreb",
+          "actor": "jordan",
+          "related_event_id": "e49",
+          "defenders": [],
+          "id": "e50",
+          "sequence": 50
+        },
+        {
+          "type": "shot",
+          "actor": "sam",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "ash"
+          ],
+          "video_seconds": 529,
+          "id": "e51",
+          "sequence": 51
+        },
+        {
+          "type": "dreb",
+          "actor": "ash",
+          "related_event_id": "e51",
+          "defenders": [],
+          "id": "e52",
+          "sequence": 52
+        },
+        {
+          "type": "shot",
+          "actor": "alex",
+          "value": 2,
+          "made": true,
+          "defenders": [
+            "ash"
+          ],
+          "video_seconds": 552,
+          "id": "e53",
+          "sequence": 53
+        },
+        {
+          "type": "turnover",
+          "actor": "alex",
+          "defenders": [],
+          "id": "e54",
+          "sequence": 54
+        },
+        {
+          "type": "steal",
+          "actor": "ash",
+          "related_event_id": "e54",
+          "defenders": [],
+          "id": "e55",
+          "sequence": 55
+        },
+        {
+          "type": "shot",
+          "actor": "jordan",
+          "value": 2,
+          "made": true,
+          "defenders": [
+            "marcus"
+          ],
+          "video_seconds": 575,
+          "id": "e56",
+          "sequence": 56
+        },
+        {
+          "type": "shot",
+          "actor": "sam",
+          "value": 2,
+          "made": false,
+          "defenders": [],
+          "video_seconds": 598,
+          "id": "e57",
+          "sequence": 57
+        },
+        {
+          "type": "oreb",
+          "actor": "kai",
+          "related_event_id": "e57",
+          "defenders": [],
+          "id": "e58",
+          "sequence": 58
+        },
+        {
+          "type": "turnover",
+          "actor": "sam",
+          "defenders": [],
+          "id": "e59",
+          "sequence": 59
+        },
+        {
+          "type": "steal",
+          "actor": "marcus",
+          "related_event_id": "e59",
+          "defenders": [],
+          "id": "e60",
+          "sequence": 60
+        },
+        {
+          "type": "shot",
+          "actor": "kai",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "ryan"
+          ],
+          "video_seconds": 621,
+          "id": "e61",
+          "sequence": 61
+        },
+        {
+          "type": "block",
+          "actor": "ryan",
+          "related_event_id": "e61",
+          "defenders": [],
+          "id": "e62",
+          "sequence": 62
+        },
+        {
+          "type": "dreb",
+          "actor": "ryan",
+          "related_event_id": "e61",
+          "defenders": [],
+          "id": "e63",
+          "sequence": 63
+        },
+        {
+          "type": "shot",
+          "actor": "alex",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "dan",
+            "marcus"
+          ],
+          "video_seconds": 644,
+          "id": "e64",
+          "sequence": 64
+        },
+        {
+          "type": "oreb",
+          "actor": "kai",
+          "related_event_id": "e64",
+          "defenders": [],
+          "id": "e65",
+          "sequence": 65
+        },
+        {
+          "type": "turnover",
+          "actor": "alex",
+          "defenders": [],
+          "id": "e66",
+          "sequence": 66
+        },
+        {
+          "type": "steal",
+          "actor": "dan",
+          "related_event_id": "e66",
+          "defenders": [],
+          "id": "e67",
+          "sequence": 67
+        },
+        {
+          "type": "shot",
+          "actor": "alex",
+          "value": 3,
+          "made": false,
+          "defenders": [
+            "dan"
+          ],
+          "video_seconds": 667,
+          "id": "e68",
+          "sequence": 68
+        },
+        {
+          "type": "block",
+          "actor": "dan",
+          "related_event_id": "e68",
+          "defenders": [],
+          "id": "e69",
+          "sequence": 69
+        },
+        {
+          "type": "dreb",
+          "actor": "dan",
+          "related_event_id": "e68",
+          "defenders": [],
+          "id": "e70",
+          "sequence": 70
+        },
+        {
+          "type": "shot",
+          "actor": "kai",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "ryan"
+          ],
+          "video_seconds": 690,
+          "id": "e71",
+          "sequence": 71
+        },
+        {
+          "type": "oreb",
+          "actor": "alex",
+          "related_event_id": "e71",
+          "defenders": [],
+          "id": "e72",
+          "sequence": 72
+        },
+        {
+          "type": "shot",
+          "actor": "dan",
+          "value": 2,
+          "made": true,
+          "defenders": [],
+          "video_seconds": 713,
+          "id": "e73",
+          "sequence": 73
+        },
+        {
+          "type": "deflection",
+          "actor": "kai",
+          "defenders": [],
+          "id": "e74",
+          "sequence": 74
+        },
+        {
+          "type": "shot",
+          "actor": "alex",
+          "value": 2,
+          "made": true,
+          "defenders": [
+            "ash"
+          ],
+          "video_seconds": 736,
+          "id": "e75",
+          "sequence": 75
+        },
+        {
+          "type": "shot",
+          "actor": "marcus",
+          "value": 2,
+          "made": true,
+          "assist": "ryan",
+          "defenders": [
+            "sam"
+          ],
+          "video_seconds": 759,
+          "id": "e76",
+          "sequence": 76
+        },
+        {
+          "type": "shot",
+          "actor": "marcus",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "alex"
+          ],
+          "video_seconds": 782,
+          "id": "e77",
+          "sequence": 77
+        },
+        {
+          "type": "dreb",
+          "actor": "alex",
+          "related_event_id": "e77",
+          "defenders": [],
+          "id": "e78",
+          "sequence": 78
+        },
+        {
+          "type": "turnover",
+          "actor": "marcus",
+          "defenders": [],
+          "id": "e79",
+          "sequence": 79
+        },
+        {
+          "type": "deflection",
+          "actor": "alex",
+          "defenders": [],
+          "id": "e80",
+          "sequence": 80
+        },
+        {
+          "type": "shot",
+          "actor": "kai",
+          "value": 2,
+          "made": true,
+          "assist": "jordan",
+          "defenders": [
+            "marcus"
+          ],
+          "video_seconds": 805,
+          "id": "e81",
+          "sequence": 81
+        },
+        {
+          "type": "turnover",
+          "actor": "kai",
+          "defenders": [],
+          "id": "e82",
+          "sequence": 82
+        },
+        {
+          "type": "shot",
+          "actor": "dan",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "alex"
+          ],
+          "video_seconds": 828,
+          "id": "e83",
+          "sequence": 83
+        },
+        {
+          "type": "dreb",
+          "actor": "alex",
+          "related_event_id": "e83",
+          "defenders": [],
+          "id": "e84",
+          "sequence": 84
+        },
+        {
+          "type": "deflection",
+          "actor": "alex",
+          "defenders": [],
+          "id": "e85",
+          "sequence": 85
+        },
+        {
+          "type": "shot",
+          "actor": "ryan",
+          "value": 3,
+          "made": false,
+          "defenders": [
+            "kai"
+          ],
+          "video_seconds": 851,
+          "id": "e86",
+          "sequence": 86
+        },
+        {
+          "type": "oreb",
+          "actor": "dan",
+          "related_event_id": "e86",
+          "defenders": [],
+          "id": "e87",
+          "sequence": 87
+        },
+        {
+          "type": "shot",
+          "actor": "alex",
+          "value": 3,
+          "made": true,
+          "assist": "jordan",
+          "defenders": [
+            "ash",
+            "marcus"
+          ],
+          "video_seconds": 874,
+          "id": "e88",
+          "sequence": 88
+        },
+        {
+          "type": "shot",
+          "actor": "kai",
+          "value": 2,
+          "made": true,
+          "defenders": [
+            "ryan"
+          ],
+          "video_seconds": 897,
+          "id": "e89",
+          "sequence": 89
+        },
+        {
+          "type": "deflection",
+          "actor": "ryan",
+          "defenders": [],
+          "id": "e90",
+          "sequence": 90
+        },
+        {
+          "type": "shot",
+          "actor": "sam",
+          "value": 3,
+          "made": true,
+          "assist": "kai",
+          "defenders": [
+            "marcus"
+          ],
+          "video_seconds": 920,
+          "id": "e91",
+          "sequence": 91
+        },
+        {
+          "type": "shot",
+          "actor": "kai",
+          "value": 2,
+          "made": true,
+          "defenders": [],
+          "video_seconds": 943,
+          "id": "e92",
+          "sequence": 92
+        },
+        {
+          "type": "shot",
+          "actor": "jordan",
+          "value": 3,
+          "made": false,
+          "defenders": [
+            "dan"
+          ],
+          "video_seconds": 966,
+          "id": "e93",
+          "sequence": 93
+        },
+        {
+          "type": "dreb",
+          "actor": "dan",
+          "related_event_id": "e93",
+          "defenders": [],
+          "id": "e94",
+          "sequence": 94
+        },
+        {
+          "type": "turnover",
+          "actor": "jordan",
+          "defenders": [],
+          "id": "e95",
+          "sequence": 95
+        },
+        {
+          "type": "shot",
+          "actor": "dan",
+          "value": 3,
+          "made": false,
+          "defenders": [
+            "kai",
+            "alex"
+          ],
+          "video_seconds": 989,
+          "id": "e96",
+          "sequence": 96
+        },
+        {
+          "type": "oreb",
+          "actor": "ryan",
+          "related_event_id": "e96",
+          "defenders": [],
+          "id": "e97",
+          "sequence": 97
+        },
+        {
+          "type": "deflection",
+          "actor": "kai",
+          "defenders": [],
+          "id": "e98",
+          "sequence": 98
+        },
+        {
+          "type": "shot",
+          "actor": "alex",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "marcus"
+          ],
+          "video_seconds": 1012,
+          "id": "e99",
+          "sequence": 99
+        },
+        {
+          "type": "dreb",
+          "actor": "marcus",
+          "related_event_id": "e99",
+          "defenders": [],
+          "id": "e100",
+          "sequence": 100
+        },
+        {
+          "type": "shot",
+          "actor": "ash",
+          "value": 2,
+          "made": true,
+          "assist": "ryan",
+          "defenders": [
+            "jordan",
+            "kai"
+          ],
+          "video_seconds": 1035,
+          "id": "e101",
+          "sequence": 101
+        },
+        {
+          "type": "turnover",
+          "actor": "ash",
+          "defenders": [],
+          "id": "e102",
+          "sequence": 102
+        },
+        {
+          "type": "steal",
+          "actor": "jordan",
+          "related_event_id": "e102",
+          "defenders": [],
+          "id": "e103",
+          "sequence": 103
+        }
+      ]
+    },
+    {
+      "id": "friday-2026-09-04-g2",
+      "label": "Game 2",
+      "base_revision": 0,
+      "completed": true,
+      "scoring_complete": true,
+      "coverage": {
+        "shooting": true,
+        "assists": true,
+        "oreb": true,
+        "turnovers": true,
+        "defense": true,
+        "deflections": true,
+        "steals": true,
+        "blocks": true,
+        "dreb": true
+      },
+      "roster": [
+        {
+          "id": "kai",
+          "player_id": "kai",
+          "outsider": false,
+          "team": "A"
+        },
+        {
+          "id": "alex",
+          "player_id": "alex",
+          "outsider": false,
+          "team": "A"
+        },
+        {
+          "id": "sam",
+          "player_id": "sam",
+          "outsider": false,
+          "team": "A"
+        },
+        {
+          "id": "jordan",
+          "player_id": "jordan",
+          "outsider": false,
+          "team": "B"
+        },
+        {
+          "id": "marcus",
+          "player_id": "marcus",
+          "outsider": false,
+          "team": "B"
+        },
+        {
+          "id": "ryan",
+          "player_id": "ryan",
+          "outsider": false,
+          "team": "B"
+        },
+        {
+          "id": "dan",
+          "player_id": "dan",
+          "outsider": false,
+          "team": "B"
+        },
+        {
+          "id": "ash",
+          "player_id": "ash",
+          "outsider": false,
+          "team": "A"
+        }
+      ],
+      "events": [
+        {
+          "type": "shot",
+          "actor": "ash",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "dan",
+            "jordan"
+          ],
+          "video_seconds": 0,
+          "id": "e1",
+          "sequence": 1
+        },
+        {
+          "type": "block",
+          "actor": "dan",
+          "related_event_id": "e1",
+          "defenders": [],
+          "id": "e2",
+          "sequence": 2
+        },
+        {
+          "type": "oreb",
+          "actor": "kai",
+          "related_event_id": "e1",
+          "defenders": [],
+          "id": "e3",
+          "sequence": 3
+        },
+        {
+          "type": "deflection",
+          "actor": "dan",
+          "defenders": [],
+          "id": "e4",
+          "sequence": 4
+        },
+        {
+          "type": "shot",
+          "actor": "kai",
+          "value": 2,
+          "made": true,
+          "defenders": [
+            "dan"
+          ],
+          "video_seconds": 23,
+          "id": "e5",
+          "sequence": 5
+        },
+        {
+          "type": "shot",
+          "actor": "alex",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "jordan"
+          ],
+          "video_seconds": 46,
+          "id": "e6",
+          "sequence": 6
+        },
+        {
+          "type": "oreb",
+          "actor": "ash",
+          "related_event_id": "e6",
+          "defenders": [],
+          "id": "e7",
+          "sequence": 7
+        },
+        {
+          "type": "shot",
+          "actor": "alex",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "jordan"
+          ],
+          "video_seconds": 69,
+          "id": "e8",
+          "sequence": 8
+        },
+        {
+          "type": "dreb",
+          "actor": "jordan",
+          "related_event_id": "e8",
+          "defenders": [],
+          "id": "e9",
+          "sequence": 9
+        },
+        {
+          "type": "shot",
+          "actor": "alex",
+          "value": 3,
+          "made": false,
+          "defenders": [
+            "ryan"
+          ],
+          "video_seconds": 92,
+          "id": "e10",
+          "sequence": 10
+        },
+        {
+          "type": "dreb",
+          "actor": "ryan",
+          "related_event_id": "e10",
+          "defenders": [],
+          "id": "e11",
+          "sequence": 11
+        },
+        {
+          "type": "shot",
+          "actor": "sam",
+          "value": 2,
+          "made": true,
+          "assist": "kai",
+          "defenders": [
+            "ryan"
+          ],
+          "video_seconds": 115,
+          "id": "e12",
+          "sequence": 12
+        },
+        {
+          "type": "shot",
+          "actor": "jordan",
+          "value": 2,
+          "made": true,
+          "assist": "marcus",
+          "defenders": [
+            "kai"
+          ],
+          "video_seconds": 138,
+          "id": "e13",
+          "sequence": 13
+        },
+        {
+          "type": "shot",
+          "actor": "ash",
+          "value": 3,
+          "made": false,
+          "defenders": [
+            "dan"
+          ],
+          "video_seconds": 161,
+          "id": "e14",
+          "sequence": 14
+        },
+        {
+          "type": "dreb",
+          "actor": "dan",
+          "related_event_id": "e14",
+          "defenders": [],
+          "id": "e15",
+          "sequence": 15
+        },
+        {
+          "type": "deflection",
+          "actor": "dan",
+          "defenders": [],
+          "id": "e16",
+          "sequence": 16
+        },
+        {
+          "type": "shot",
+          "actor": "sam",
+          "value": 3,
+          "made": false,
+          "defenders": [],
+          "video_seconds": 184,
+          "id": "e17",
+          "sequence": 17
+        },
+        {
+          "type": "oreb",
+          "actor": "kai",
+          "related_event_id": "e17",
+          "defenders": [],
+          "id": "e18",
+          "sequence": 18
+        },
+        {
+          "type": "shot",
+          "actor": "ash",
+          "value": 3,
+          "made": false,
+          "defenders": [
+            "ryan"
+          ],
+          "video_seconds": 207,
+          "id": "e19",
+          "sequence": 19
+        },
+        {
+          "type": "oreb",
+          "actor": "sam",
+          "related_event_id": "e19",
+          "defenders": [],
+          "id": "e20",
+          "sequence": 20
+        },
+        {
+          "type": "deflection",
+          "actor": "ryan",
+          "defenders": [],
+          "id": "e21",
+          "sequence": 21
+        },
+        {
+          "type": "shot",
+          "actor": "ash",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "jordan"
+          ],
+          "video_seconds": 230,
+          "id": "e22",
+          "sequence": 22
+        },
+        {
+          "type": "oreb",
+          "actor": "alex",
+          "related_event_id": "e22",
+          "defenders": [],
+          "id": "e23",
+          "sequence": 23
+        },
+        {
+          "type": "shot",
+          "actor": "ash",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "jordan",
+            "marcus"
+          ],
+          "video_seconds": 253,
+          "id": "e24",
+          "sequence": 24
+        },
+        {
+          "type": "dreb",
+          "actor": "jordan",
+          "related_event_id": "e24",
+          "defenders": [],
+          "id": "e25",
+          "sequence": 25
+        },
+        {
+          "type": "deflection",
+          "actor": "jordan",
+          "defenders": [],
+          "id": "e26",
+          "sequence": 26
+        },
+        {
+          "type": "shot",
+          "actor": "marcus",
+          "value": 2,
+          "made": true,
+          "defenders": [
+            "ash"
+          ],
+          "video_seconds": 276,
+          "id": "e27",
+          "sequence": 27
+        },
+        {
+          "type": "shot",
+          "actor": "marcus",
+          "value": 2,
+          "made": true,
+          "defenders": [],
+          "video_seconds": 299,
+          "id": "e28",
+          "sequence": 28
+        },
+        {
+          "type": "turnover",
+          "actor": "marcus",
+          "defenders": [],
+          "id": "e29",
+          "sequence": 29
+        },
+        {
+          "type": "shot",
+          "actor": "sam",
+          "value": 3,
+          "made": true,
+          "defenders": [
+            "jordan"
+          ],
+          "video_seconds": 322,
+          "id": "e30",
+          "sequence": 30
+        },
+        {
+          "type": "deflection",
+          "actor": "jordan",
+          "defenders": [],
+          "id": "e31",
+          "sequence": 31
+        },
+        {
+          "type": "shot",
+          "actor": "ryan",
+          "value": 3,
+          "made": false,
+          "defenders": [
+            "alex"
+          ],
+          "video_seconds": 345,
+          "id": "e32",
+          "sequence": 32
+        },
+        {
+          "type": "dreb",
+          "actor": "alex",
+          "related_event_id": "e32",
+          "defenders": [],
+          "id": "e33",
+          "sequence": 33
+        },
+        {
+          "type": "shot",
+          "actor": "ryan",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "ash"
+          ],
+          "video_seconds": 368,
+          "id": "e34",
+          "sequence": 34
+        },
+        {
+          "type": "block",
+          "actor": "ash",
+          "related_event_id": "e34",
+          "defenders": [],
+          "id": "e35",
+          "sequence": 35
+        },
+        {
+          "type": "dreb",
+          "actor": "ash",
+          "related_event_id": "e34",
+          "defenders": [],
+          "id": "e36",
+          "sequence": 36
+        },
+        {
+          "type": "shot",
+          "actor": "jordan",
+          "value": 3,
+          "made": true,
+          "assist": "ryan",
+          "defenders": [
+            "sam"
+          ],
+          "video_seconds": 391,
+          "id": "e37",
+          "sequence": 37
+        },
+        {
+          "type": "shot",
+          "actor": "alex",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "ryan"
+          ],
+          "video_seconds": 414,
+          "id": "e38",
+          "sequence": 38
+        },
+        {
+          "type": "oreb",
+          "actor": "sam",
+          "related_event_id": "e38",
+          "defenders": [],
+          "id": "e39",
+          "sequence": 39
+        },
+        {
+          "type": "deflection",
+          "actor": "ryan",
+          "defenders": [],
+          "id": "e40",
+          "sequence": 40
+        },
+        {
+          "type": "shot",
+          "actor": "alex",
+          "value": 2,
+          "made": true,
+          "defenders": [
+            "dan"
+          ],
+          "video_seconds": 437,
+          "id": "e41",
+          "sequence": 41
+        },
+        {
+          "type": "shot",
+          "actor": "dan",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "kai"
+          ],
+          "video_seconds": 460,
+          "id": "e42",
+          "sequence": 42
+        },
+        {
+          "type": "dreb",
+          "actor": "kai",
+          "related_event_id": "e42",
+          "defenders": [],
+          "id": "e43",
+          "sequence": 43
+        },
+        {
+          "type": "shot",
+          "actor": "alex",
+          "value": 2,
+          "made": true,
+          "assist": "sam",
+          "defenders": [
+            "jordan"
+          ],
+          "video_seconds": 483,
+          "id": "e44",
+          "sequence": 44
+        },
+        {
+          "type": "shot",
+          "actor": "kai",
+          "value": 2,
+          "made": true,
+          "defenders": [
+            "marcus"
+          ],
+          "video_seconds": 506,
+          "id": "e45",
+          "sequence": 45
+        },
+        {
+          "type": "shot",
+          "actor": "marcus",
+          "value": 3,
+          "made": true,
+          "assist": "ryan",
+          "defenders": [
+            "sam",
+            "kai"
+          ],
+          "video_seconds": 529,
+          "id": "e46",
+          "sequence": 46
+        },
+        {
+          "type": "shot",
+          "actor": "ryan",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "kai"
+          ],
+          "video_seconds": 552,
+          "id": "e47",
+          "sequence": 47
+        },
+        {
+          "type": "dreb",
+          "actor": "kai",
+          "related_event_id": "e47",
+          "defenders": [],
+          "id": "e48",
+          "sequence": 48
+        },
+        {
+          "type": "shot",
+          "actor": "ryan",
+          "value": 3,
+          "made": true,
+          "defenders": [
+            "sam"
+          ],
+          "video_seconds": 575,
+          "id": "e49",
+          "sequence": 49
+        },
+        {
+          "type": "deflection",
+          "actor": "sam",
+          "defenders": [],
+          "id": "e50",
+          "sequence": 50
+        },
+        {
+          "type": "shot",
+          "actor": "alex",
+          "value": 2,
+          "made": true,
+          "defenders": [
+            "dan"
+          ],
+          "video_seconds": 598,
+          "id": "e51",
+          "sequence": 51
+        },
+        {
+          "type": "shot",
+          "actor": "marcus",
+          "value": 2,
+          "made": true,
+          "defenders": [
+            "sam",
+            "kai"
+          ],
+          "video_seconds": 621,
+          "id": "e52",
+          "sequence": 52
+        },
+        {
+          "type": "shot",
+          "actor": "marcus",
+          "value": 2,
+          "made": true,
+          "assist": "ryan",
+          "defenders": [
+            "alex"
+          ],
+          "video_seconds": 644,
+          "id": "e53",
+          "sequence": 53
+        },
+        {
+          "type": "shot",
+          "actor": "ryan",
+          "value": 2,
+          "made": true,
+          "assist": "marcus",
+          "defenders": [
+            "sam"
+          ],
+          "video_seconds": 667,
+          "id": "e54",
+          "sequence": 54
+        },
+        {
+          "type": "shot",
+          "actor": "ryan",
+          "value": 3,
+          "made": true,
+          "assist": "marcus",
+          "defenders": [
+            "ash"
+          ],
+          "video_seconds": 690,
+          "id": "e55",
+          "sequence": 55
+        },
+        {
+          "type": "shot",
+          "actor": "ryan",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "kai"
+          ],
+          "video_seconds": 713,
+          "id": "e56",
+          "sequence": 56
+        },
+        {
+          "type": "block",
+          "actor": "kai",
+          "related_event_id": "e56",
+          "defenders": [],
+          "id": "e57",
+          "sequence": 57
+        },
+        {
+          "type": "oreb",
+          "actor": "jordan",
+          "related_event_id": "e56",
+          "defenders": [],
+          "id": "e58",
+          "sequence": 58
+        },
+        {
+          "type": "turnover",
+          "actor": "ryan",
+          "defenders": [],
+          "id": "e59",
+          "sequence": 59
+        },
+        {
+          "type": "steal",
+          "actor": "kai",
+          "related_event_id": "e59",
+          "defenders": [],
+          "id": "e60",
+          "sequence": 60
+        },
+        {
+          "type": "shot",
+          "actor": "sam",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "dan"
+          ],
+          "video_seconds": 736,
+          "id": "e61",
+          "sequence": 61
+        },
+        {
+          "type": "oreb",
+          "actor": "ash",
+          "related_event_id": "e61",
+          "defenders": [],
+          "id": "e62",
+          "sequence": 62
+        },
+        {
+          "type": "deflection",
+          "actor": "dan",
+          "defenders": [],
+          "id": "e63",
+          "sequence": 63
+        },
+        {
+          "type": "shot",
+          "actor": "jordan",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "kai"
+          ],
+          "video_seconds": 759,
+          "id": "e64",
+          "sequence": 64
+        },
+        {
+          "type": "dreb",
+          "actor": "kai",
+          "related_event_id": "e64",
+          "defenders": [],
+          "id": "e65",
+          "sequence": 65
+        },
+        {
+          "type": "turnover",
+          "actor": "jordan",
+          "defenders": [],
+          "id": "e66",
+          "sequence": 66
+        },
+        {
+          "type": "steal",
+          "actor": "kai",
+          "related_event_id": "e66",
+          "defenders": [],
+          "id": "e67",
+          "sequence": 67
+        },
+        {
+          "type": "shot",
+          "actor": "marcus",
+          "value": 2,
+          "made": true,
+          "assist": "dan",
+          "defenders": [
+            "ash"
+          ],
+          "video_seconds": 782,
+          "id": "e68",
+          "sequence": 68
+        },
+        {
+          "type": "shot",
+          "actor": "jordan",
+          "value": 3,
+          "made": true,
+          "assist": "dan",
+          "defenders": [
+            "ash"
+          ],
+          "video_seconds": 805,
+          "id": "e69",
+          "sequence": 69
+        },
+        {
+          "type": "shot",
+          "actor": "sam",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "marcus"
+          ],
+          "video_seconds": 828,
+          "id": "e70",
+          "sequence": 70
+        },
+        {
+          "type": "block",
+          "actor": "marcus",
+          "related_event_id": "e70",
+          "defenders": [],
+          "id": "e71",
+          "sequence": 71
+        },
+        {
+          "type": "dreb",
+          "actor": "marcus",
+          "related_event_id": "e70",
+          "defenders": [],
+          "id": "e72",
+          "sequence": 72
+        },
+        {
+          "type": "turnover",
+          "actor": "sam",
+          "defenders": [],
+          "id": "e73",
+          "sequence": 73
+        },
+        {
+          "type": "steal",
+          "actor": "marcus",
+          "related_event_id": "e73",
+          "defenders": [],
+          "id": "e74",
+          "sequence": 74
+        },
+        {
+          "type": "shot",
+          "actor": "dan",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "sam"
+          ],
+          "video_seconds": 851,
+          "id": "e75",
+          "sequence": 75
+        },
+        {
+          "type": "block",
+          "actor": "sam",
+          "related_event_id": "e75",
+          "defenders": [],
+          "id": "e76",
+          "sequence": 76
+        },
+        {
+          "type": "dreb",
+          "actor": "sam",
+          "related_event_id": "e75",
+          "defenders": [],
+          "id": "e77",
+          "sequence": 77
+        },
+        {
+          "type": "shot",
+          "actor": "sam",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "ryan",
+            "jordan"
+          ],
+          "video_seconds": 874,
+          "id": "e78",
+          "sequence": 78
+        },
+        {
+          "type": "dreb",
+          "actor": "ryan",
+          "related_event_id": "e78",
+          "defenders": [],
+          "id": "e79",
+          "sequence": 79
+        },
+        {
+          "type": "deflection",
+          "actor": "ryan",
+          "defenders": [],
+          "id": "e80",
+          "sequence": 80
+        },
+        {
+          "type": "shot",
+          "actor": "jordan",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "kai"
+          ],
+          "video_seconds": 897,
+          "id": "e81",
+          "sequence": 81
+        },
+        {
+          "type": "oreb",
+          "actor": "marcus",
+          "related_event_id": "e81",
+          "defenders": [],
+          "id": "e82",
+          "sequence": 82
+        },
+        {
+          "type": "shot",
+          "actor": "marcus",
+          "value": 2,
+          "made": true,
+          "defenders": [
+            "ash",
+            "kai"
+          ],
+          "video_seconds": 920,
+          "id": "e83",
+          "sequence": 83
+        },
+        {
+          "type": "shot",
+          "actor": "ryan",
+          "value": 3,
+          "made": true,
+          "defenders": [],
+          "video_seconds": 943,
+          "id": "e84",
+          "sequence": 84
+        },
+        {
+          "type": "shot",
+          "actor": "sam",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "dan"
+          ],
+          "video_seconds": 966,
+          "id": "e85",
+          "sequence": 85
+        },
+        {
+          "type": "dreb",
+          "actor": "dan",
+          "related_event_id": "e85",
+          "defenders": [],
+          "id": "e86",
+          "sequence": 86
+        },
+        {
+          "type": "shot",
+          "actor": "kai",
+          "value": 2,
+          "made": true,
+          "defenders": [],
+          "video_seconds": 989,
+          "id": "e87",
+          "sequence": 87
+        },
+        {
+          "type": "turnover",
+          "actor": "kai",
+          "defenders": [],
+          "id": "e88",
+          "sequence": 88
+        },
+        {
+          "type": "shot",
+          "actor": "alex",
+          "value": 2,
+          "made": true,
+          "defenders": [
+            "ryan"
+          ],
+          "video_seconds": 1012,
+          "id": "e89",
+          "sequence": 89
+        },
+        {
+          "type": "shot",
+          "actor": "jordan",
+          "value": 2,
+          "made": true,
+          "assist": "ryan",
+          "defenders": [
+            "alex",
+            "kai"
+          ],
+          "video_seconds": 1035,
+          "id": "e90",
+          "sequence": 90
+        },
+        {
+          "type": "turnover",
+          "actor": "jordan",
+          "defenders": [],
+          "id": "e91",
+          "sequence": 91
+        },
+        {
+          "type": "steal",
+          "actor": "alex",
+          "related_event_id": "e91",
+          "defenders": [],
+          "id": "e92",
+          "sequence": 92
+        }
+      ]
+    },
+    {
+      "id": "friday-2026-09-04-g3",
+      "label": "Game 3",
+      "base_revision": 0,
+      "completed": true,
+      "scoring_complete": true,
+      "coverage": {
+        "shooting": true,
+        "assists": true,
+        "oreb": true,
+        "turnovers": true,
+        "defense": true,
+        "deflections": true,
+        "steals": true,
+        "blocks": true,
+        "dreb": true
+      },
+      "roster": [
+        {
+          "id": "kai",
+          "player_id": "kai",
+          "outsider": false,
+          "team": "A"
+        },
+        {
+          "id": "alex",
+          "player_id": "alex",
+          "outsider": false,
+          "team": "A"
+        },
+        {
+          "id": "sam",
+          "player_id": "sam",
+          "outsider": false,
+          "team": "B"
+        },
+        {
+          "id": "jordan",
+          "player_id": "jordan",
+          "outsider": false,
+          "team": "B"
+        },
+        {
+          "id": "marcus",
+          "player_id": "marcus",
+          "outsider": false,
+          "team": "B"
+        },
+        {
+          "id": "ryan",
+          "player_id": "ryan",
+          "outsider": false,
+          "team": "B"
+        },
+        {
+          "id": "dan",
+          "player_id": "dan",
+          "outsider": false,
+          "team": "A"
+        },
+        {
+          "id": "ash",
+          "player_id": "ash",
+          "outsider": false,
+          "team": "A"
+        }
+      ],
+      "events": [
+        {
+          "type": "shot",
+          "actor": "jordan",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "ash"
+          ],
+          "video_seconds": 0,
+          "id": "e1",
+          "sequence": 1
+        },
+        {
+          "type": "dreb",
+          "actor": "ash",
+          "related_event_id": "e1",
+          "defenders": [],
+          "id": "e2",
+          "sequence": 2
+        },
+        {
+          "type": "shot",
+          "actor": "jordan",
+          "value": 3,
+          "made": false,
+          "defenders": [
+            "kai"
+          ],
+          "video_seconds": 23,
+          "id": "e3",
+          "sequence": 3
+        },
+        {
+          "type": "dreb",
+          "actor": "kai",
+          "related_event_id": "e3",
+          "defenders": [],
+          "id": "e4",
+          "sequence": 4
+        },
+        {
+          "type": "shot",
+          "actor": "kai",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "marcus",
+            "sam"
+          ],
+          "video_seconds": 46,
+          "id": "e5",
+          "sequence": 5
+        },
+        {
+          "type": "dreb",
+          "actor": "marcus",
+          "related_event_id": "e5",
+          "defenders": [],
+          "id": "e6",
+          "sequence": 6
+        },
+        {
+          "type": "shot",
+          "actor": "dan",
+          "value": 3,
+          "made": true,
+          "assist": "kai",
+          "defenders": [],
+          "video_seconds": 69,
+          "id": "e7",
+          "sequence": 7
+        },
+        {
+          "type": "deflection",
+          "actor": "marcus",
+          "defenders": [],
+          "id": "e8",
+          "sequence": 8
+        },
+        {
+          "type": "shot",
+          "actor": "sam",
+          "value": 3,
+          "made": false,
+          "defenders": [],
+          "video_seconds": 92,
+          "id": "e9",
+          "sequence": 9
+        },
+        {
+          "type": "dreb",
+          "actor": "dan",
+          "related_event_id": "e9",
+          "defenders": [],
+          "id": "e10",
+          "sequence": 10
+        },
+        {
+          "type": "turnover",
+          "actor": "sam",
+          "defenders": [],
+          "id": "e11",
+          "sequence": 11
+        },
+        {
+          "type": "steal",
+          "actor": "dan",
+          "related_event_id": "e11",
+          "defenders": [],
+          "id": "e12",
+          "sequence": 12
+        },
+        {
+          "type": "shot",
+          "actor": "ryan",
+          "value": 3,
+          "made": false,
+          "defenders": [],
+          "video_seconds": 115,
+          "id": "e13",
+          "sequence": 13
+        },
+        {
+          "type": "oreb",
+          "actor": "sam",
+          "related_event_id": "e13",
+          "defenders": [],
+          "id": "e14",
+          "sequence": 14
+        },
+        {
+          "type": "shot",
+          "actor": "sam",
+          "value": 3,
+          "made": true,
+          "assist": "ryan",
+          "defenders": [
+            "dan",
+            "kai"
+          ],
+          "video_seconds": 138,
+          "id": "e15",
+          "sequence": 15
+        },
+        {
+          "type": "shot",
+          "actor": "kai",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "marcus"
+          ],
+          "video_seconds": 161,
+          "id": "e16",
+          "sequence": 16
+        },
+        {
+          "type": "oreb",
+          "actor": "alex",
+          "related_event_id": "e16",
+          "defenders": [],
+          "id": "e17",
+          "sequence": 17
+        },
+        {
+          "type": "turnover",
+          "actor": "kai",
+          "defenders": [],
+          "id": "e18",
+          "sequence": 18
+        },
+        {
+          "type": "shot",
+          "actor": "kai",
+          "value": 2,
+          "made": true,
+          "assist": "alex",
+          "defenders": [
+            "marcus"
+          ],
+          "video_seconds": 184,
+          "id": "e19",
+          "sequence": 19
+        },
+        {
+          "type": "shot",
+          "actor": "jordan",
+          "value": 2,
+          "made": true,
+          "defenders": [
+            "alex"
+          ],
+          "video_seconds": 207,
+          "id": "e20",
+          "sequence": 20
+        },
+        {
+          "type": "turnover",
+          "actor": "jordan",
+          "defenders": [],
+          "id": "e21",
+          "sequence": 21
+        },
+        {
+          "type": "deflection",
+          "actor": "alex",
+          "defenders": [],
+          "id": "e22",
+          "sequence": 22
+        },
+        {
+          "type": "shot",
+          "actor": "sam",
+          "value": 2,
+          "made": true,
+          "assist": "ryan",
+          "defenders": [
+            "kai"
+          ],
+          "video_seconds": 230,
+          "id": "e23",
+          "sequence": 23
+        },
+        {
+          "type": "shot",
+          "actor": "alex",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "marcus",
+            "sam"
+          ],
+          "video_seconds": 253,
+          "id": "e24",
+          "sequence": 24
+        },
+        {
+          "type": "dreb",
+          "actor": "marcus",
+          "related_event_id": "e24",
+          "defenders": [],
+          "id": "e25",
+          "sequence": 25
+        },
+        {
+          "type": "deflection",
+          "actor": "marcus",
+          "defenders": [],
+          "id": "e26",
+          "sequence": 26
+        },
+        {
+          "type": "shot",
+          "actor": "dan",
+          "value": 2,
+          "made": false,
+          "defenders": [],
+          "video_seconds": 276,
+          "id": "e27",
+          "sequence": 27
+        },
+        {
+          "type": "oreb",
+          "actor": "ash",
+          "related_event_id": "e27",
+          "defenders": [],
+          "id": "e28",
+          "sequence": 28
+        },
+        {
+          "type": "shot",
+          "actor": "alex",
+          "value": 2,
+          "made": true,
+          "defenders": [
+            "ryan"
+          ],
+          "video_seconds": 299,
+          "id": "e29",
+          "sequence": 29
+        },
+        {
+          "type": "turnover",
+          "actor": "alex",
+          "defenders": [],
+          "id": "e30",
+          "sequence": 30
+        },
+        {
+          "type": "shot",
+          "actor": "sam",
+          "value": 3,
+          "made": true,
+          "assist": "ryan",
+          "defenders": [
+            "alex"
+          ],
+          "video_seconds": 322,
+          "id": "e31",
+          "sequence": 31
+        },
+        {
+          "type": "shot",
+          "actor": "marcus",
+          "value": 2,
+          "made": true,
+          "assist": "jordan",
+          "defenders": [
+            "alex"
+          ],
+          "video_seconds": 345,
+          "id": "e32",
+          "sequence": 32
+        },
+        {
+          "type": "deflection",
+          "actor": "alex",
+          "defenders": [],
+          "id": "e33",
+          "sequence": 33
+        },
+        {
+          "type": "shot",
+          "actor": "sam",
+          "value": 3,
+          "made": true,
+          "defenders": [
+            "ash"
+          ],
+          "video_seconds": 368,
+          "id": "e34",
+          "sequence": 34
+        },
+        {
+          "type": "deflection",
+          "actor": "ash",
+          "defenders": [],
+          "id": "e35",
+          "sequence": 35
+        },
+        {
+          "type": "shot",
+          "actor": "alex",
+          "value": 2,
+          "made": true,
+          "defenders": [],
+          "video_seconds": 391,
+          "id": "e36",
+          "sequence": 36
+        },
+        {
+          "type": "shot",
+          "actor": "ryan",
+          "value": 3,
+          "made": true,
+          "assist": "marcus",
+          "defenders": [
+            "ash"
+          ],
+          "video_seconds": 414,
+          "id": "e37",
+          "sequence": 37
+        },
+        {
+          "type": "shot",
+          "actor": "ash",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "sam"
+          ],
+          "video_seconds": 437,
+          "id": "e38",
+          "sequence": 38
+        },
+        {
+          "type": "dreb",
+          "actor": "sam",
+          "related_event_id": "e38",
+          "defenders": [],
+          "id": "e39",
+          "sequence": 39
+        },
+        {
+          "type": "turnover",
+          "actor": "ash",
+          "defenders": [],
+          "id": "e40",
+          "sequence": 40
+        },
+        {
+          "type": "steal",
+          "actor": "sam",
+          "related_event_id": "e40",
+          "defenders": [],
+          "id": "e41",
+          "sequence": 41
+        },
+        {
+          "type": "shot",
+          "actor": "sam",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "ash"
+          ],
+          "video_seconds": 460,
+          "id": "e42",
+          "sequence": 42
+        },
+        {
+          "type": "dreb",
+          "actor": "ash",
+          "related_event_id": "e42",
+          "defenders": [],
+          "id": "e43",
+          "sequence": 43
+        },
+        {
+          "type": "shot",
+          "actor": "sam",
+          "value": 3,
+          "made": true,
+          "defenders": [
+            "ash"
+          ],
+          "video_seconds": 483,
+          "id": "e44",
+          "sequence": 44
+        },
+        {
+          "type": "deflection",
+          "actor": "ash",
+          "defenders": [],
+          "id": "e45",
+          "sequence": 45
+        },
+        {
+          "type": "shot",
+          "actor": "ryan",
+          "value": 3,
+          "made": true,
+          "assist": "marcus",
+          "defenders": [
+            "alex",
+            "kai"
+          ],
+          "video_seconds": 506,
+          "id": "e46",
+          "sequence": 46
+        },
+        {
+          "type": "shot",
+          "actor": "kai",
+          "value": 3,
+          "made": false,
+          "defenders": [
+            "jordan"
+          ],
+          "video_seconds": 529,
+          "id": "e47",
+          "sequence": 47
+        },
+        {
+          "type": "dreb",
+          "actor": "jordan",
+          "related_event_id": "e47",
+          "defenders": [],
+          "id": "e48",
+          "sequence": 48
+        },
+        {
+          "type": "shot",
+          "actor": "sam",
+          "value": 2,
+          "made": true,
+          "defenders": [
+            "ash"
+          ],
+          "video_seconds": 552,
+          "id": "e49",
+          "sequence": 49
+        },
+        {
+          "type": "shot",
+          "actor": "ash",
+          "value": 3,
+          "made": false,
+          "defenders": [
+            "ryan"
+          ],
+          "video_seconds": 575,
+          "id": "e50",
+          "sequence": 50
+        },
+        {
+          "type": "dreb",
+          "actor": "ryan",
+          "related_event_id": "e50",
+          "defenders": [],
+          "id": "e51",
+          "sequence": 51
+        },
+        {
+          "type": "shot",
+          "actor": "sam",
+          "value": 3,
+          "made": false,
+          "defenders": [
+            "dan",
+            "kai"
+          ],
+          "video_seconds": 598,
+          "id": "e52",
+          "sequence": 52
+        },
+        {
+          "type": "dreb",
+          "actor": "dan",
+          "related_event_id": "e52",
+          "defenders": [],
+          "id": "e53",
+          "sequence": 53
+        },
+        {
+          "type": "shot",
+          "actor": "ryan",
+          "value": 2,
+          "made": true,
+          "assist": "marcus",
+          "defenders": [
+            "alex"
+          ],
+          "video_seconds": 621,
+          "id": "e54",
+          "sequence": 54
+        },
+        {
+          "type": "shot",
+          "actor": "kai",
+          "value": 2,
+          "made": true,
+          "assist": "alex",
+          "defenders": [
+            "ryan"
+          ],
+          "video_seconds": 644,
+          "id": "e55",
+          "sequence": 55
+        },
+        {
+          "type": "shot",
+          "actor": "dan",
+          "value": 3,
+          "made": true,
+          "defenders": [
+            "sam"
+          ],
+          "video_seconds": 667,
+          "id": "e56",
+          "sequence": 56
+        },
+        {
+          "type": "shot",
+          "actor": "ryan",
+          "value": 3,
+          "made": true,
+          "defenders": [
+            "kai"
+          ],
+          "video_seconds": 690,
+          "id": "e57",
+          "sequence": 57
+        },
+        {
+          "type": "turnover",
+          "actor": "ryan",
+          "defenders": [],
+          "id": "e58",
+          "sequence": 58
+        },
+        {
+          "type": "steal",
+          "actor": "kai",
+          "related_event_id": "e58",
+          "defenders": [],
+          "id": "e59",
+          "sequence": 59
+        },
+        {
+          "type": "shot",
+          "actor": "kai",
+          "value": 2,
+          "made": false,
+          "defenders": [],
+          "video_seconds": 713,
+          "id": "e60",
+          "sequence": 60
+        },
+        {
+          "type": "dreb",
+          "actor": "marcus",
+          "related_event_id": "e60",
+          "defenders": [],
+          "id": "e61",
+          "sequence": 61
+        },
+        {
+          "type": "shot",
+          "actor": "alex",
+          "value": 2,
+          "made": true,
+          "defenders": [
+            "marcus"
+          ],
+          "video_seconds": 736,
+          "id": "e62",
+          "sequence": 62
+        },
+        {
+          "type": "shot",
+          "actor": "kai",
+          "value": 2,
+          "made": true,
+          "assist": "ash",
+          "defenders": [],
+          "video_seconds": 759,
+          "id": "e63",
+          "sequence": 63
+        },
+        {
+          "type": "deflection",
+          "actor": "jordan",
+          "defenders": [],
+          "id": "e64",
+          "sequence": 64
+        },
+        {
+          "type": "shot",
+          "actor": "marcus",
+          "value": 2,
+          "made": false,
+          "defenders": [],
+          "video_seconds": 782,
+          "id": "e65",
+          "sequence": 65
+        },
+        {
+          "type": "dreb",
+          "actor": "alex",
+          "related_event_id": "e65",
+          "defenders": [],
+          "id": "e66",
+          "sequence": 66
+        },
+        {
+          "type": "shot",
+          "actor": "ryan",
+          "value": 3,
+          "made": false,
+          "defenders": [
+            "ash",
+            "kai"
+          ],
+          "video_seconds": 805,
+          "id": "e67",
+          "sequence": 67
+        },
+        {
+          "type": "dreb",
+          "actor": "ash",
+          "related_event_id": "e67",
+          "defenders": [],
+          "id": "e68",
+          "sequence": 68
+        },
+        {
+          "type": "shot",
+          "actor": "ash",
+          "value": 2,
+          "made": true,
+          "defenders": [
+            "marcus"
+          ],
+          "video_seconds": 828,
+          "id": "e69",
+          "sequence": 69
+        },
+        {
+          "type": "deflection",
+          "actor": "marcus",
+          "defenders": [],
+          "id": "e70",
+          "sequence": 70
+        },
+        {
+          "type": "shot",
+          "actor": "marcus",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "alex"
+          ],
+          "video_seconds": 851,
+          "id": "e71",
+          "sequence": 71
+        },
+        {
+          "type": "dreb",
+          "actor": "alex",
+          "related_event_id": "e71",
+          "defenders": [],
+          "id": "e72",
+          "sequence": 72
+        },
+        {
+          "type": "shot",
+          "actor": "ash",
+          "value": 2,
+          "made": true,
+          "assist": "dan",
+          "defenders": [
+            "ryan"
+          ],
+          "video_seconds": 874,
+          "id": "e73",
+          "sequence": 73
+        },
+        {
+          "type": "shot",
+          "actor": "jordan",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "dan"
+          ],
+          "video_seconds": 897,
+          "id": "e74",
+          "sequence": 74
+        },
+        {
+          "type": "dreb",
+          "actor": "dan",
+          "related_event_id": "e74",
+          "defenders": [],
+          "id": "e75",
+          "sequence": 75
+        },
+        {
+          "type": "turnover",
+          "actor": "jordan",
+          "defenders": [],
+          "id": "e76",
+          "sequence": 76
+        },
+        {
+          "type": "shot",
+          "actor": "ash",
+          "value": 2,
+          "made": true,
+          "assist": "dan",
+          "defenders": [
+            "sam"
+          ],
+          "video_seconds": 920,
+          "id": "e77",
+          "sequence": 77
+        },
+        {
+          "type": "shot",
+          "actor": "alex",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "sam"
+          ],
+          "video_seconds": 943,
+          "id": "e78",
+          "sequence": 78
+        },
+        {
+          "type": "oreb",
+          "actor": "ash",
+          "related_event_id": "e78",
+          "defenders": [],
+          "id": "e79",
+          "sequence": 79
+        },
+        {
+          "type": "shot",
+          "actor": "dan",
+          "value": 3,
+          "made": true,
+          "defenders": [
+            "sam"
+          ],
+          "video_seconds": 966,
+          "id": "e80",
+          "sequence": 80
+        },
+        {
+          "type": "turnover",
+          "actor": "dan",
+          "defenders": [],
+          "id": "e81",
+          "sequence": 81
+        },
+        {
+          "type": "steal",
+          "actor": "sam",
+          "related_event_id": "e81",
+          "defenders": [],
+          "id": "e82",
+          "sequence": 82
+        },
+        {
+          "type": "shot",
+          "actor": "dan",
+          "value": 3,
+          "made": true,
+          "defenders": [
+            "marcus"
+          ],
+          "video_seconds": 989,
+          "id": "e83",
+          "sequence": 83
+        },
+        {
+          "type": "shot",
+          "actor": "alex",
+          "value": 2,
+          "made": true,
+          "defenders": [],
+          "video_seconds": 1012,
+          "id": "e84",
+          "sequence": 84
+        },
+        {
+          "type": "shot",
+          "actor": "marcus",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "alex"
+          ],
+          "video_seconds": 1035,
+          "id": "e85",
+          "sequence": 85
+        },
+        {
+          "type": "dreb",
+          "actor": "alex",
+          "related_event_id": "e85",
+          "defenders": [],
+          "id": "e86",
+          "sequence": 86
+        },
+        {
+          "type": "deflection",
+          "actor": "alex",
+          "defenders": [],
+          "id": "e87",
+          "sequence": 87
+        }
+      ]
+    },
+    {
+      "id": "friday-2026-09-04-g4",
+      "label": "Game 4",
+      "base_revision": 0,
+      "completed": true,
+      "scoring_complete": true,
+      "coverage": {
+        "shooting": true,
+        "assists": true,
+        "oreb": true,
+        "turnovers": true,
+        "defense": true,
+        "deflections": true,
+        "steals": true,
+        "blocks": true,
+        "dreb": true
+      },
+      "roster": [
+        {
+          "id": "kai",
+          "player_id": "kai",
+          "outsider": false,
+          "team": "A"
+        },
+        {
+          "id": "alex",
+          "player_id": "alex",
+          "outsider": false,
+          "team": "A"
+        },
+        {
+          "id": "sam",
+          "player_id": "sam",
+          "outsider": false,
+          "team": "A"
+        },
+        {
+          "id": "jordan",
+          "player_id": "jordan",
+          "outsider": false,
+          "team": "A"
+        },
+        {
+          "id": "marcus",
+          "player_id": "marcus",
+          "outsider": false,
+          "team": "B"
+        },
+        {
+          "id": "ryan",
+          "player_id": "ryan",
+          "outsider": false,
+          "team": "B"
+        },
+        {
+          "id": "dan",
+          "player_id": "dan",
+          "outsider": false,
+          "team": "B"
+        },
+        {
+          "id": "ash",
+          "player_id": "ash",
+          "outsider": false,
+          "team": "B"
+        }
+      ],
+      "events": [
+        {
+          "type": "shot",
+          "actor": "ash",
+          "value": 2,
+          "made": true,
+          "defenders": [
+            "jordan"
+          ],
+          "video_seconds": 0,
+          "id": "e1",
+          "sequence": 1
+        },
+        {
+          "type": "shot",
+          "actor": "dan",
+          "value": 3,
+          "made": false,
+          "defenders": [
+            "jordan",
+            "kai"
+          ],
+          "video_seconds": 23,
+          "id": "e2",
+          "sequence": 2
+        },
+        {
+          "type": "dreb",
+          "actor": "jordan",
+          "related_event_id": "e2",
+          "defenders": [],
+          "id": "e3",
+          "sequence": 3
+        },
+        {
+          "type": "shot",
+          "actor": "alex",
+          "value": 2,
+          "made": true,
+          "assist": "sam",
+          "defenders": [],
+          "video_seconds": 46,
+          "id": "e4",
+          "sequence": 4
+        },
+        {
+          "type": "shot",
+          "actor": "dan",
+          "value": 2,
+          "made": true,
+          "assist": "ash",
+          "defenders": [
+            "kai"
+          ],
+          "video_seconds": 69,
+          "id": "e5",
+          "sequence": 5
+        },
+        {
+          "type": "deflection",
+          "actor": "kai",
+          "defenders": [],
+          "id": "e6",
+          "sequence": 6
+        },
+        {
+          "type": "shot",
+          "actor": "jordan",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "ryan"
+          ],
+          "video_seconds": 92,
+          "id": "e7",
+          "sequence": 7
+        },
+        {
+          "type": "oreb",
+          "actor": "kai",
+          "related_event_id": "e7",
+          "defenders": [],
+          "id": "e8",
+          "sequence": 8
+        },
+        {
+          "type": "shot",
+          "actor": "dan",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "sam"
+          ],
+          "video_seconds": 115,
+          "id": "e9",
+          "sequence": 9
+        },
+        {
+          "type": "dreb",
+          "actor": "sam",
+          "related_event_id": "e9",
+          "defenders": [],
+          "id": "e10",
+          "sequence": 10
+        },
+        {
+          "type": "shot",
+          "actor": "kai",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "ash"
+          ],
+          "video_seconds": 138,
+          "id": "e11",
+          "sequence": 11
+        },
+        {
+          "type": "oreb",
+          "actor": "alex",
+          "related_event_id": "e11",
+          "defenders": [],
+          "id": "e12",
+          "sequence": 12
+        },
+        {
+          "type": "turnover",
+          "actor": "kai",
+          "defenders": [],
+          "id": "e13",
+          "sequence": 13
+        },
+        {
+          "type": "steal",
+          "actor": "ash",
+          "related_event_id": "e13",
+          "defenders": [],
+          "id": "e14",
+          "sequence": 14
+        },
+        {
+          "type": "shot",
+          "actor": "dan",
+          "value": 2,
+          "made": true,
+          "defenders": [
+            "kai"
+          ],
+          "video_seconds": 161,
+          "id": "e15",
+          "sequence": 15
+        },
+        {
+          "type": "shot",
+          "actor": "ash",
+          "value": 2,
+          "made": true,
+          "assist": "marcus",
+          "defenders": [
+            "kai"
+          ],
+          "video_seconds": 184,
+          "id": "e16",
+          "sequence": 16
+        },
+        {
+          "type": "deflection",
+          "actor": "kai",
+          "defenders": [],
+          "id": "e17",
+          "sequence": 17
+        },
+        {
+          "type": "shot",
+          "actor": "ash",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "jordan"
+          ],
+          "video_seconds": 207,
+          "id": "e18",
+          "sequence": 18
+        },
+        {
+          "type": "oreb",
+          "actor": "ryan",
+          "related_event_id": "e18",
+          "defenders": [],
+          "id": "e19",
+          "sequence": 19
+        },
+        {
+          "type": "shot",
+          "actor": "ryan",
+          "value": 3,
+          "made": true,
+          "defenders": [
+            "kai"
+          ],
+          "video_seconds": 230,
+          "id": "e20",
+          "sequence": 20
+        },
+        {
+          "type": "shot",
+          "actor": "ryan",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "kai"
+          ],
+          "video_seconds": 253,
+          "id": "e21",
+          "sequence": 21
+        },
+        {
+          "type": "dreb",
+          "actor": "kai",
+          "related_event_id": "e21",
+          "defenders": [],
+          "id": "e22",
+          "sequence": 22
+        },
+        {
+          "type": "shot",
+          "actor": "sam",
+          "value": 2,
+          "made": false,
+          "defenders": [],
+          "video_seconds": 276,
+          "id": "e23",
+          "sequence": 23
+        },
+        {
+          "type": "dreb",
+          "actor": "dan",
+          "related_event_id": "e23",
+          "defenders": [],
+          "id": "e24",
+          "sequence": 24
+        },
+        {
+          "type": "turnover",
+          "actor": "sam",
+          "defenders": [],
+          "id": "e25",
+          "sequence": 25
+        },
+        {
+          "type": "steal",
+          "actor": "dan",
+          "related_event_id": "e25",
+          "defenders": [],
+          "id": "e26",
+          "sequence": 26
+        },
+        {
+          "type": "shot",
+          "actor": "dan",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "jordan"
+          ],
+          "video_seconds": 299,
+          "id": "e27",
+          "sequence": 27
+        },
+        {
+          "type": "dreb",
+          "actor": "jordan",
+          "related_event_id": "e27",
+          "defenders": [],
+          "id": "e28",
+          "sequence": 28
+        },
+        {
+          "type": "shot",
+          "actor": "jordan",
+          "value": 3,
+          "made": true,
+          "defenders": [
+            "dan",
+            "marcus"
+          ],
+          "video_seconds": 322,
+          "id": "e29",
+          "sequence": 29
+        },
+        {
+          "type": "turnover",
+          "actor": "jordan",
+          "defenders": [],
+          "id": "e30",
+          "sequence": 30
+        },
+        {
+          "type": "shot",
+          "actor": "dan",
+          "value": 3,
+          "made": true,
+          "defenders": [
+            "sam",
+            "kai"
+          ],
+          "video_seconds": 345,
+          "id": "e31",
+          "sequence": 31
+        },
+        {
+          "type": "shot",
+          "actor": "marcus",
+          "value": 3,
+          "made": true,
+          "assist": "ash",
+          "defenders": [
+            "jordan"
+          ],
+          "video_seconds": 368,
+          "id": "e32",
+          "sequence": 32
+        },
+        {
+          "type": "deflection",
+          "actor": "jordan",
+          "defenders": [],
+          "id": "e33",
+          "sequence": 33
+        },
+        {
+          "type": "shot",
+          "actor": "ash",
+          "value": 2,
+          "made": true,
+          "assist": "marcus",
+          "defenders": [
+            "alex"
+          ],
+          "video_seconds": 391,
+          "id": "e34",
+          "sequence": 34
+        },
+        {
+          "type": "shot",
+          "actor": "ryan",
+          "value": 2,
+          "made": true,
+          "assist": "dan",
+          "defenders": [
+            "sam",
+            "kai"
+          ],
+          "video_seconds": 414,
+          "id": "e35",
+          "sequence": 35
+        },
+        {
+          "type": "turnover",
+          "actor": "ryan",
+          "defenders": [],
+          "id": "e36",
+          "sequence": 36
+        },
+        {
+          "type": "steal",
+          "actor": "sam",
+          "related_event_id": "e36",
+          "defenders": [],
+          "id": "e37",
+          "sequence": 37
+        },
+        {
+          "type": "shot",
+          "actor": "ryan",
+          "value": 2,
+          "made": true,
+          "assist": "dan",
+          "defenders": [
+            "alex",
+            "kai"
+          ],
+          "video_seconds": 437,
+          "id": "e38",
+          "sequence": 38
+        },
+        {
+          "type": "shot",
+          "actor": "marcus",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "sam"
+          ],
+          "video_seconds": 460,
+          "id": "e39",
+          "sequence": 39
+        },
+        {
+          "type": "oreb",
+          "actor": "ash",
+          "related_event_id": "e39",
+          "defenders": [],
+          "id": "e40",
+          "sequence": 40
+        },
+        {
+          "type": "shot",
+          "actor": "alex",
+          "value": 2,
+          "made": true,
+          "assist": "sam",
+          "defenders": [
+            "marcus"
+          ],
+          "video_seconds": 483,
+          "id": "e41",
+          "sequence": 41
+        },
+        {
+          "type": "deflection",
+          "actor": "marcus",
+          "defenders": [],
+          "id": "e42",
+          "sequence": 42
+        },
+        {
+          "type": "shot",
+          "actor": "alex",
+          "value": 3,
+          "made": false,
+          "defenders": [
+            "ryan"
+          ],
+          "video_seconds": 506,
+          "id": "e43",
+          "sequence": 43
+        },
+        {
+          "type": "dreb",
+          "actor": "ryan",
+          "related_event_id": "e43",
+          "defenders": [],
+          "id": "e44",
+          "sequence": 44
+        },
+        {
+          "type": "deflection",
+          "actor": "ryan",
+          "defenders": [],
+          "id": "e45",
+          "sequence": 45
+        },
+        {
+          "type": "shot",
+          "actor": "jordan",
+          "value": 3,
+          "made": false,
+          "defenders": [
+            "ash",
+            "marcus"
+          ],
+          "video_seconds": 529,
+          "id": "e46",
+          "sequence": 46
+        },
+        {
+          "type": "dreb",
+          "actor": "ash",
+          "related_event_id": "e46",
+          "defenders": [],
+          "id": "e47",
+          "sequence": 47
+        },
+        {
+          "type": "turnover",
+          "actor": "jordan",
+          "defenders": [],
+          "id": "e48",
+          "sequence": 48
+        },
+        {
+          "type": "steal",
+          "actor": "ash",
+          "related_event_id": "e48",
+          "defenders": [],
+          "id": "e49",
+          "sequence": 49
+        },
+        {
+          "type": "deflection",
+          "actor": "ash",
+          "defenders": [],
+          "id": "e50",
+          "sequence": 50
+        },
+        {
+          "type": "shot",
+          "actor": "kai",
+          "value": 3,
+          "made": false,
+          "defenders": [
+            "ryan"
+          ],
+          "video_seconds": 552,
+          "id": "e51",
+          "sequence": 51
+        },
+        {
+          "type": "dreb",
+          "actor": "ryan",
+          "related_event_id": "e51",
+          "defenders": [],
+          "id": "e52",
+          "sequence": 52
+        },
+        {
+          "type": "turnover",
+          "actor": "kai",
+          "defenders": [],
+          "id": "e53",
+          "sequence": 53
+        },
+        {
+          "type": "shot",
+          "actor": "kai",
+          "value": 3,
+          "made": false,
+          "defenders": [],
+          "video_seconds": 575,
+          "id": "e54",
+          "sequence": 54
+        },
+        {
+          "type": "block",
+          "actor": "marcus",
+          "related_event_id": "e54",
+          "defenders": [],
+          "id": "e55",
+          "sequence": 55
+        },
+        {
+          "type": "dreb",
+          "actor": "marcus",
+          "related_event_id": "e54",
+          "defenders": [],
+          "id": "e56",
+          "sequence": 56
+        },
+        {
+          "type": "shot",
+          "actor": "marcus",
+          "value": 2,
+          "made": false,
+          "defenders": [],
+          "video_seconds": 598,
+          "id": "e57",
+          "sequence": 57
+        },
+        {
+          "type": "dreb",
+          "actor": "jordan",
+          "related_event_id": "e57",
+          "defenders": [],
+          "id": "e58",
+          "sequence": 58
+        },
+        {
+          "type": "deflection",
+          "actor": "jordan",
+          "defenders": [],
+          "id": "e59",
+          "sequence": 59
+        },
+        {
+          "type": "shot",
+          "actor": "kai",
+          "value": 2,
+          "made": false,
+          "defenders": [],
+          "video_seconds": 621,
+          "id": "e60",
+          "sequence": 60
+        },
+        {
+          "type": "dreb",
+          "actor": "ryan",
+          "related_event_id": "e60",
+          "defenders": [],
+          "id": "e61",
+          "sequence": 61
+        },
+        {
+          "type": "turnover",
+          "actor": "kai",
+          "defenders": [],
+          "id": "e62",
+          "sequence": 62
+        },
+        {
+          "type": "steal",
+          "actor": "ryan",
+          "related_event_id": "e62",
+          "defenders": [],
+          "id": "e63",
+          "sequence": 63
+        },
+        {
+          "type": "shot",
+          "actor": "kai",
+          "value": 3,
+          "made": true,
+          "defenders": [],
+          "video_seconds": 644,
+          "id": "e64",
+          "sequence": 64
+        },
+        {
+          "type": "deflection",
+          "actor": "dan",
+          "defenders": [],
+          "id": "e65",
+          "sequence": 65
+        },
+        {
+          "type": "shot",
+          "actor": "alex",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "ash"
+          ],
+          "video_seconds": 667,
+          "id": "e66",
+          "sequence": 66
+        },
+        {
+          "type": "dreb",
+          "actor": "ash",
+          "related_event_id": "e66",
+          "defenders": [],
+          "id": "e67",
+          "sequence": 67
+        },
+        {
+          "type": "deflection",
+          "actor": "ash",
+          "defenders": [],
+          "id": "e68",
+          "sequence": 68
+        },
+        {
+          "type": "shot",
+          "actor": "jordan",
+          "value": 2,
+          "made": true,
+          "assist": "sam",
+          "defenders": [
+            "ash"
+          ],
+          "video_seconds": 690,
+          "id": "e69",
+          "sequence": 69
+        },
+        {
+          "type": "turnover",
+          "actor": "jordan",
+          "defenders": [],
+          "id": "e70",
+          "sequence": 70
+        },
+        {
+          "type": "steal",
+          "actor": "ash",
+          "related_event_id": "e70",
+          "defenders": [],
+          "id": "e71",
+          "sequence": 71
+        },
+        {
+          "type": "deflection",
+          "actor": "ash",
+          "defenders": [],
+          "id": "e72",
+          "sequence": 72
+        },
+        {
+          "type": "shot",
+          "actor": "sam",
+          "value": 2,
+          "made": false,
+          "defenders": [],
+          "video_seconds": 713,
+          "id": "e73",
+          "sequence": 73
+        },
+        {
+          "type": "dreb",
+          "actor": "marcus",
+          "related_event_id": "e73",
+          "defenders": [],
+          "id": "e74",
+          "sequence": 74
+        },
+        {
+          "type": "shot",
+          "actor": "marcus",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "sam"
+          ],
+          "video_seconds": 736,
+          "id": "e75",
+          "sequence": 75
+        },
+        {
+          "type": "dreb",
+          "actor": "sam",
+          "related_event_id": "e75",
+          "defenders": [],
+          "id": "e76",
+          "sequence": 76
+        },
+        {
+          "type": "turnover",
+          "actor": "marcus",
+          "defenders": [],
+          "id": "e77",
+          "sequence": 77
+        },
+        {
+          "type": "steal",
+          "actor": "sam",
+          "related_event_id": "e77",
+          "defenders": [],
+          "id": "e78",
+          "sequence": 78
+        },
+        {
+          "type": "shot",
+          "actor": "marcus",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "kai"
+          ],
+          "video_seconds": 759,
+          "id": "e79",
+          "sequence": 79
+        },
+        {
+          "type": "dreb",
+          "actor": "kai",
+          "related_event_id": "e79",
+          "defenders": [],
+          "id": "e80",
+          "sequence": 80
+        },
+        {
+          "type": "shot",
+          "actor": "jordan",
+          "value": 3,
+          "made": true,
+          "assist": "kai",
+          "defenders": [
+            "ryan",
+            "marcus"
+          ],
+          "video_seconds": 782,
+          "id": "e81",
+          "sequence": 81
+        },
+        {
+          "type": "shot",
+          "actor": "dan",
+          "value": 2,
+          "made": true,
+          "assist": "ryan",
+          "defenders": [
+            "sam"
+          ],
+          "video_seconds": 805,
+          "id": "e82",
+          "sequence": 82
+        },
+        {
+          "type": "shot",
+          "actor": "ash",
+          "value": 2,
+          "made": true,
+          "defenders": [
+            "sam"
+          ],
+          "video_seconds": 828,
+          "id": "e83",
+          "sequence": 83
+        },
+        {
+          "type": "shot",
+          "actor": "sam",
+          "value": 2,
+          "made": true,
+          "defenders": [
+            "ryan",
+            "marcus"
+          ],
+          "video_seconds": 851,
+          "id": "e84",
+          "sequence": 84
+        },
+        {
+          "type": "turnover",
+          "actor": "sam",
+          "defenders": [],
+          "id": "e85",
+          "sequence": 85
+        },
+        {
+          "type": "steal",
+          "actor": "ryan",
+          "related_event_id": "e85",
+          "defenders": [],
+          "id": "e86",
+          "sequence": 86
+        },
+        {
+          "type": "shot",
+          "actor": "sam",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "marcus"
+          ],
+          "video_seconds": 874,
+          "id": "e87",
+          "sequence": 87
+        },
+        {
+          "type": "dreb",
+          "actor": "marcus",
+          "related_event_id": "e87",
+          "defenders": [],
+          "id": "e88",
+          "sequence": 88
+        },
+        {
+          "type": "shot",
+          "actor": "kai",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "marcus"
+          ],
+          "video_seconds": 897,
+          "id": "e89",
+          "sequence": 89
+        },
+        {
+          "type": "oreb",
+          "actor": "alex",
+          "related_event_id": "e89",
+          "defenders": [],
+          "id": "e90",
+          "sequence": 90
+        },
+        {
+          "type": "turnover",
+          "actor": "kai",
+          "defenders": [],
+          "id": "e91",
+          "sequence": 91
+        },
+        {
+          "type": "steal",
+          "actor": "marcus",
+          "related_event_id": "e91",
+          "defenders": [],
+          "id": "e92",
+          "sequence": 92
+        },
+        {
+          "type": "shot",
+          "actor": "dan",
+          "value": 3,
+          "made": false,
+          "defenders": [
+            "kai"
+          ],
+          "video_seconds": 920,
+          "id": "e93",
+          "sequence": 93
+        },
+        {
+          "type": "dreb",
+          "actor": "kai",
+          "related_event_id": "e93",
+          "defenders": [],
+          "id": "e94",
+          "sequence": 94
+        },
+        {
+          "type": "shot",
+          "actor": "alex",
+          "value": 2,
+          "made": true,
+          "assist": "kai",
+          "defenders": [
+            "ash"
+          ],
+          "video_seconds": 943,
+          "id": "e95",
+          "sequence": 95
+        },
+        {
+          "type": "shot",
+          "actor": "marcus",
+          "value": 3,
+          "made": true,
+          "assist": "ash",
+          "defenders": [
+            "kai"
+          ],
+          "video_seconds": 966,
+          "id": "e96",
+          "sequence": 96
+        },
+        {
+          "type": "shot",
+          "actor": "alex",
+          "value": 2,
+          "made": true,
+          "defenders": [
+            "ryan",
+            "marcus"
+          ],
+          "video_seconds": 989,
+          "id": "e97",
+          "sequence": 97
+        },
+        {
+          "type": "shot",
+          "actor": "alex",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "marcus"
+          ],
+          "video_seconds": 1012,
+          "id": "e98",
+          "sequence": 98
+        },
+        {
+          "type": "block",
+          "actor": "marcus",
+          "related_event_id": "e98",
+          "defenders": [],
+          "id": "e99",
+          "sequence": 99
+        },
+        {
+          "type": "dreb",
+          "actor": "marcus",
+          "related_event_id": "e98",
+          "defenders": [],
+          "id": "e100",
+          "sequence": 100
+        },
+        {
+          "type": "shot",
+          "actor": "jordan",
+          "value": 2,
+          "made": false,
+          "defenders": [],
+          "video_seconds": 1035,
+          "id": "e101",
+          "sequence": 101
+        },
+        {
+          "type": "dreb",
+          "actor": "dan",
+          "related_event_id": "e101",
+          "defenders": [],
+          "id": "e102",
+          "sequence": 102
+        },
+        {
+          "type": "turnover",
+          "actor": "jordan",
+          "defenders": [],
+          "id": "e103",
+          "sequence": 103
+        },
+        {
+          "type": "steal",
+          "actor": "dan",
+          "related_event_id": "e103",
+          "defenders": [],
+          "id": "e104",
+          "sequence": 104
+        }
+      ]
+    }
+  ],
+  "unresolved": []
+}

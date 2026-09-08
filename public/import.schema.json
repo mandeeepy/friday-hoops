@@ -1,0 +1,288 @@
+{
+  "$ref": "#/definitions/FridayHoopsImport",
+  "definitions": {
+    "FridayHoopsImport": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "type": "number",
+          "const": 1
+        },
+        "session": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "pattern": "^[a-zA-Z0-9_-]{1,80}$"
+            },
+            "date": {
+              "type": "string",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+            },
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100
+            }
+          },
+          "required": [
+            "id",
+            "date",
+            "label"
+          ],
+          "additionalProperties": false
+        },
+        "players": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "$ref": "#/definitions/FridayHoopsImport/properties/session/properties/id"
+              },
+              "name": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 60
+              },
+              "aliases": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 60
+                },
+                "maxItems": 20,
+                "default": []
+              }
+            },
+            "required": [
+              "id",
+              "name"
+            ],
+            "additionalProperties": false
+          },
+          "maxItems": 200
+        },
+        "games": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "$ref": "#/definitions/FridayHoopsImport/properties/session/properties/id"
+              },
+              "label": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100
+              },
+              "base_revision": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "completed": {
+                "type": "boolean"
+              },
+              "scoring_complete": {
+                "type": "boolean"
+              },
+              "coverage": {
+                "type": "object",
+                "properties": {
+                  "shooting": {
+                    "type": "boolean"
+                  },
+                  "assists": {
+                    "type": "boolean"
+                  },
+                  "oreb": {
+                    "type": "boolean"
+                  },
+                  "turnovers": {
+                    "type": "boolean"
+                  },
+                  "defense": {
+                    "type": "boolean"
+                  },
+                  "deflections": {
+                    "type": "boolean"
+                  },
+                  "steals": {
+                    "type": "boolean"
+                  },
+                  "blocks": {
+                    "type": "boolean"
+                  },
+                  "dreb": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "shooting",
+                  "assists",
+                  "oreb",
+                  "turnovers",
+                  "defense",
+                  "deflections",
+                  "steals",
+                  "blocks",
+                  "dreb"
+                ],
+                "additionalProperties": false
+              },
+              "roster": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "$ref": "#/definitions/FridayHoopsImport/properties/session/properties/id"
+                    },
+                    "player_id": {
+                      "anyOf": [
+                        {
+                          "$ref": "#/definitions/FridayHoopsImport/properties/session/properties/id"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "team": {
+                      "type": "string",
+                      "enum": [
+                        "A",
+                        "B"
+                      ]
+                    },
+                    "outsider": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "player_id",
+                    "team",
+                    "outsider"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 2,
+                "maxItems": 30
+              },
+              "events": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "$ref": "#/definitions/FridayHoopsImport/properties/session/properties/id"
+                    },
+                    "sequence": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "type": {
+                      "type": "string",
+                      "enum": [
+                        "shot",
+                        "oreb",
+                        "dreb",
+                        "turnover",
+                        "steal",
+                        "block",
+                        "deflection"
+                      ]
+                    },
+                    "actor": {
+                      "$ref": "#/definitions/FridayHoopsImport/properties/session/properties/id"
+                    },
+                    "value": {
+                      "type": "number",
+                      "enum": [
+                        2,
+                        3
+                      ]
+                    },
+                    "made": {
+                      "type": "boolean"
+                    },
+                    "assist": {
+                      "$ref": "#/definitions/FridayHoopsImport/properties/session/properties/id"
+                    },
+                    "defenders": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/definitions/FridayHoopsImport/properties/session/properties/id"
+                      },
+                      "maxItems": 10,
+                      "default": []
+                    },
+                    "related_event_id": {
+                      "$ref": "#/definitions/FridayHoopsImport/properties/session/properties/id"
+                    },
+                    "video_seconds": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "source": {
+                      "type": "string",
+                      "maxLength": 2000
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "sequence",
+                    "type",
+                    "actor"
+                  ],
+                  "additionalProperties": false
+                },
+                "maxItems": 10000
+              },
+              "video_url": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "id",
+              "label",
+              "base_revision",
+              "completed",
+              "scoring_complete",
+              "coverage",
+              "roster",
+              "events"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1,
+          "maxItems": 50
+        },
+        "unresolved": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "maxItems": 100
+        },
+        "transcript": {
+          "type": "string",
+          "maxLength": 200000
+        }
+      },
+      "required": [
+        "schema_version",
+        "session",
+        "players",
+        "games",
+        "unresolved"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

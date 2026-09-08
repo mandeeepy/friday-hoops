@@ -1,0 +1,25 @@
+PRAGMA foreign_keys = ON;
+CREATE TABLE IF NOT EXISTS metadata (id INTEGER PRIMARY KEY CHECK(id=1), version INTEGER NOT NULL DEFAULT 0, updated_at TEXT);
+INSERT OR IGNORE INTO metadata(id) VALUES(1);
+CREATE TABLE players(id TEXT PRIMARY KEY,name TEXT NOT NULL,aliases TEXT NOT NULL DEFAULT '[]');
+CREATE TABLE player_names(name TEXT PRIMARY KEY COLLATE NOCASE,player_id TEXT NOT NULL REFERENCES players(id));
+CREATE TABLE sessions(id TEXT PRIMARY KEY,date TEXT NOT NULL,label TEXT NOT NULL);
+CREATE INDEX sessions_date ON sessions(date);
+CREATE TABLE imports(id TEXT PRIMARY KEY,payload TEXT NOT NULL,published_at TEXT NOT NULL);
+CREATE TABLE revisions(game_id TEXT NOT NULL,revision INTEGER NOT NULL,payload TEXT NOT NULL,import_id TEXT NOT NULL REFERENCES imports(id),published_at TEXT NOT NULL,PRIMARY KEY(game_id,revision));
+CREATE TABLE games(id TEXT PRIMARY KEY,session_id TEXT NOT NULL REFERENCES sessions(id),date TEXT NOT NULL,label TEXT NOT NULL,revision INTEGER NOT NULL,payload TEXT NOT NULL,summary TEXT NOT NULL);
+CREATE INDEX games_date ON games(date,id);
+CREATE INDEX games_session ON games(session_id);
+CREATE TABLE participants(game_id TEXT NOT NULL REFERENCES games(id),id TEXT NOT NULL,player_id TEXT REFERENCES players(id),team TEXT NOT NULL CHECK(team IN ('A','B')),outsider INTEGER NOT NULL,PRIMARY KEY(game_id,id));
+CREATE INDEX participants_player ON participants(player_id,game_id);
+CREATE TABLE events(game_id TEXT NOT NULL REFERENCES games(id),id TEXT NOT NULL,sequence INTEGER NOT NULL,type TEXT NOT NULL,actor TEXT NOT NULL,payload TEXT NOT NULL,PRIMARY KEY(game_id,id),UNIQUE(game_id,sequence));
+CREATE INDEX events_type ON events(type,game_id);
+CREATE TABLE shot_defenders(game_id TEXT NOT NULL,event_id TEXT NOT NULL,participant_id TEXT NOT NULL,weight REAL NOT NULL,PRIMARY KEY(game_id,event_id,participant_id));
+CREATE TABLE player_game_stats(game_id TEXT NOT NULL REFERENCES games(id),player_id TEXT NOT NULL REFERENCES players(id),date TEXT NOT NULL,coverage TEXT NOT NULL,stats TEXT NOT NULL,PRIMARY KEY(game_id,player_id));
+CREATE INDEX stats_date_player ON player_game_stats(date,player_id);
+CREATE TABLE auth_sessions(token_hash TEXT PRIMARY KEY,role TEXT NOT NULL,expires_at INTEGER NOT NULL,secret_hash TEXT NOT NULL);
+CREATE TABLE limits(key TEXT PRIMARY KEY,count INTEGER NOT NULL,expires_at INTEGER NOT NULL);
+CREATE TABLE ai_budget(month TEXT PRIMARY KEY,spent REAL NOT NULL DEFAULT 0,reserved REAL NOT NULL DEFAULT 0);
+CREATE TABLE ai_requests(id TEXT PRIMARY KEY,month TEXT NOT NULL,reservation REAL NOT NULL,actual REAL,status TEXT NOT NULL,created_at TEXT NOT NULL);
+-- A failing CHECK makes a concurrent publication batch roll back atomically.
+CREATE TABLE publication_guard(id TEXT PRIMARY KEY,ok INTEGER NOT NULL CHECK(ok=1));

@@ -1,0 +1,20 @@
+name = "friday-hoops-api"
+main = "worker/index.ts"
+compatibility_date = "2026-09-01"
+
+[vars]
+ALLOWED_ORIGIN = "http://127.0.0.1:5173"
+AI_MONTHLY_USD = "5"
+AI_FLASH_MODEL = "deepseek-v4-flash"
+AI_PRO_MODEL = "deepseek-v4-pro"
+# Conservative peak, uncached USD per million tokens; verify at deployment.
+AI_FLASH_INPUT_PRICE = "0.44"
+AI_FLASH_OUTPUT_PRICE = "1.32"
+AI_PRO_INPUT_PRICE = "1.32"
+AI_PRO_OUTPUT_PRICE = "3.96"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "hoops"
+database_id = "00000000-0000-0000-0000-000000000000"
+migrations_dir = "migrations"

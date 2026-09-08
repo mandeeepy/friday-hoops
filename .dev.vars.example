@@ -1,0 +1,4 @@
+# Copy to .dev.vars for local development. The actual file is gitignored.
+OWNER_PASSPHRASE=replace-with-a-long-unique-owner-passphrase
+FRIEND_ACCESS_CODE=replace-with-a-different-friend-code
+# DEEPSEEK_API_KEY=add-only-when-testing-live-AI

@@ -1,0 +1,40 @@
+{
+  "name": "friday-hoops",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc -b && vite build",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "worker:dev": "wrangler dev --port 8787",
+    "worker:deploy": "wrangler deploy",
+    "db:local": "wrangler d1 migrations apply hoops --local",
+    "db:remote": "wrangler d1 migrations apply hoops --remote",
+    "test:e2e": "playwright test",
+    "schema": "tsx scripts/schema.ts",
+    "test:performance": "tsx scripts/performance.ts"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "4.7.0",
+    "vite": "6.3.5",
+    "typescript": "5.9.2",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "recharts": "3.1.2",
+    "lucide-react": "0.468.0",
+    "zod": "3.25.76"
+  },
+  "devDependencies": {
+    "@types/react": "19.1.10",
+    "@types/react-dom": "19.1.9",
+    "@types/node": "22.18.0",
+    "vitest": "3.2.4",
+    "tsx": "4.20.5",
+    "wrangler": "4.30.0",
+    "@cloudflare/workers-types": "4.20250823.0",
+    "@playwright/test": "1.55.0",
+    "zod-to-json-schema": "3.24.6"
+  }
+}
