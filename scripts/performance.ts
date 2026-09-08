@@ -38,3 +38,88 @@ console.log(
 );
 if (!stats.length || elapsed > 5000)
   throw new Error("Aggregation performance threshold exceeded");
+
+// Exercise the actual SQLite schema and indexes at the same event volume.
+const { DatabaseSync } = await import("node:sqlite");
+const { readFileSync } = await import("node:fs");
+const db = new DatabaseSync(":memory:");
+db.exec(readFileSync("migrations/0001_initial.sql", "utf8"));
+db.exec("BEGIN");
+const insertPlayer = db.prepare(
+  "INSERT INTO players(id,name,aliases) VALUES(?,?,?)",
+);
+for (const p of sample.players)
+  insertPlayer.run(p.id, p.name, JSON.stringify(p.aliases));
+const insertSession = db.prepare(
+  "INSERT OR IGNORE INTO sessions(id,date,label) VALUES(?,?,?)",
+);
+const insertGame = db.prepare(
+  "INSERT INTO games(id,session_id,date,label,revision,payload,summary) VALUES(?,?,?,?,1,?,?)",
+);
+const insertEvent = db.prepare(
+  "INSERT INTO events(game_id,id,sequence,type,actor,payload) VALUES(?,?,?,?,?,?)",
+);
+const insertRow = db.prepare(
+  "INSERT INTO player_game_stats(game_id,player_id,date,coverage,stats) VALUES(?,?,?,?,?)",
+);
+for (const g of games) {
+  insertSession.run(g.session_id, g.date, "Benchmark");
+  insertGame.run(g.id, g.session_id, g.date, g.label, JSON.stringify(g), "{}");
+  for (const e of g.events)
+    insertEvent.run(g.id, e.id, e.sequence, e.type, e.actor, JSON.stringify(e));
+  for (const r of gameRows(g))
+    insertRow.run(
+      g.id,
+      r.player_id,
+      g.date,
+      JSON.stringify(r.coverage),
+      JSON.stringify(r.values),
+    );
+}
+db.exec("COMMIT");
+const qt = performance.now();
+const queryRows = db
+  .prepare("SELECT * FROM player_game_stats WHERE date BETWEEN ? AND ?")
+  .all("2020-01-01", "2030-12-31");
+const queried = aggregate(
+  queryRows.map((r: any) => ({
+    game_id: r.game_id,
+    player_id: r.player_id,
+    date: r.date,
+    coverage: JSON.parse(r.coverage),
+    values: JSON.parse(r.stats),
+  })),
+  sample.players,
+);
+const page = db
+  .prepare(
+    "SELECT payload FROM events WHERE game_id=? AND sequence>? ORDER BY sequence LIMIT 100",
+  )
+  .all(games[0].id, -1);
+const queryElapsed = performance.now() - qt;
+const plans = [
+  db
+    .prepare(
+      "EXPLAIN QUERY PLAN SELECT * FROM player_game_stats WHERE date BETWEEN ? AND ?",
+    )
+    .all("2020-01-01", "2030-12-31"),
+  db
+    .prepare(
+      "EXPLAIN QUERY PLAN SELECT payload FROM events WHERE game_id=? AND sequence>? ORDER BY sequence LIMIT 100",
+    )
+    .all(games[0].id, -1),
+];
+console.log(
+  JSON.stringify(
+    {
+      indexed_query_and_aggregation_ms: Math.round(queryElapsed),
+      queriedPlayers: queried.length,
+      eventPageSize: page.length,
+      plans,
+    },
+    null,
+    2,
+  ),
+);
+if (queryElapsed > 5000 || queried.length !== 8 || page.length > 100)
+  throw new Error("Indexed query benchmark failed");

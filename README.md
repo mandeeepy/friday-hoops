@@ -1,5 +1,7 @@
 # Friday Hoops
 
+[Open the dashboard](https://mandeeepy.github.io/friday-hoops/) · Starts in labelled sample mode until the live backend is connected.
+
 A mobile-first basketball dashboard for a rotating Friday group. Three public tabs: Offense, Defense, Ask AI. Includes a separate owner workspace for reusable players, game rosters, AI preparation packs, validated imports, and revision restoration.
 
 ```sh

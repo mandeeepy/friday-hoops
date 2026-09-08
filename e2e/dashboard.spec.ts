@@ -65,3 +65,20 @@ test("mobile widths do not overflow", async ({ page }) => {
     ).toBe(true);
   }
 });
+
+test("double text size remains usable without page overflow", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/?demo=1");
+  await expect(
+    page.getByRole("heading", { name: "Offensive leaders" }),
+  ).toBeVisible();
+  await page.addStyleTag({ content: ":root { font-size: 32px !important; }" });
+  expect(
+    await page.evaluate(
+      () => document.documentElement.scrollWidth <= innerWidth,
+    ),
+  ).toBe(true);
+  await expect(page.getByLabel("Players filter")).toBeVisible();
+});

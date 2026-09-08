@@ -116,7 +116,8 @@ export default function App() {
   const [meta, setMeta] = useState<Meta | null>(null);
   const [players, setPlayers] = useState<Player[]>([]);
   const [demo, setDemo] = useState(
-    new URLSearchParams(location.search).get("demo") === "1" || (import.meta.env.PROD && !import.meta.env.VITE_API_URL),
+    new URLSearchParams(location.search).get("demo") === "1" ||
+      (import.meta.env.PROD && !import.meta.env.VITE_API_URL),
   );
   const [status, setStatus] = useState("loading");
   const [error, setError] = useState("");
@@ -187,7 +188,10 @@ export default function App() {
       : request<Snapshot>(`/snapshot?${qs(filters)}`)
     )
       .then(async (d) => {
-        if (pairGames && !demo && filters.players.length===2) d.games=await request<Snapshot["games"]>(`/games?${qs(filters)}&pair=1&limit=100`);
+        if (pairGames && !demo && filters.players.length === 2)
+          d.games = await request<Snapshot["games"]>(
+            `/games?${qs(filters)}&pair=1&limit=100`,
+          );
         if (!cancel) {
           setData(d);
           setStatus("ready");
@@ -246,7 +250,17 @@ export default function App() {
     document.addEventListener("keydown", esc);
     return () => document.removeEventListener("keydown", esc);
   }, []);
-  async function loadOlderGames(){if(!data||demo)return;try{const next=await request<Snapshot["games"]>(`/games?${qs(filters)}&limit=100&offset=${data.games.length}${pairGames?"&pair=1":""}`);setData(d=>d?{...d,games:[...d.games,...next]}:d)}catch(e){setError((e as Error).message)}}
+  async function loadOlderGames() {
+    if (!data || demo) return;
+    try {
+      const next = await request<Snapshot["games"]>(
+        `/games?${qs(filters)}&limit=100&offset=${data.games.length}${pairGames ? "&pair=1" : ""}`,
+      );
+      setData((d) => (d ? { ...d, games: [...d.games, ...next] } : d));
+    } catch (e) {
+      setError((e as Error).message);
+    }
+  }
   function changeTab(next: string) {
     setTab(next);
     setSort(next === "defense" ? "steals" : "points");
@@ -1309,7 +1323,17 @@ export default function App() {
                         <ArrowUpRight size={16} />
                       </button>
                     ))}
-                  {!demo && data.games.length < (pairGames?.length ?? data.totalGames) && <button className="secondary" style={{margin:20}} onClick={loadOlderGames}>Load older games</button>}
+                  {!demo &&
+                    data.games.length <
+                      (pairGames?.length ?? data.totalGames) && (
+                      <button
+                        className="secondary"
+                        style={{ margin: 20 }}
+                        onClick={loadOlderGames}
+                      >
+                        Load older games
+                      </button>
+                    )}
                   {!data.games.length && (
                     <div className="empty">
                       No games yet. The owner can publish the first session in
