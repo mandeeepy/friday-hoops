@@ -3,16 +3,22 @@ import { readFileSync } from "node:fs";
 import { publishedSchema, publishStatic } from "../shared/published";
 import { publishedRequest, type Snapshot } from "../src/api";
 import { sampleImport } from "../shared/demo";
+import { aggregate, gameRows } from "../shared/stats";
 
 const data = publishedSchema.parse(JSON.parse(readFileSync("public/stats.json","utf8")));
 describe("published stats without a backend", () => {
-  it("shows the real game and six tracked players, with guests only in the roster", () => {
+  it("shows both real games and seven tracked players, with guests only in rosters", () => {
     const snapshot = publishedRequest(data,"/snapshot?from=2026-09-11&to=2026-09-11") as Snapshot;
-    expect(snapshot.totalGames).toBe(1);
-    expect(snapshot.stats).toHaveLength(6);
-    expect(snapshot.games[0].score).toEqual({A:21,B:27});
-    expect(snapshot.stats.find(p=>p.id === "saad")?.points).toBe(15);
-    expect(snapshot.games[0].roster.filter(p=>p.outsider)).toHaveLength(2);
+    expect(snapshot.totalGames).toBe(2);
+    expect(snapshot.stats).toHaveLength(7);
+    const first = snapshot.games.find(g=>g.id === "game-2026-09-11-1")!;
+    const second = snapshot.games.find(g=>g.id === "game-2026-09-11-2")!;
+    expect(first.score).toEqual({A:21,B:27});
+    expect(second.score).toEqual({A:30,B:8});
+    expect(snapshot.stats.find(p=>p.id === "saad")?.points).toBe(21);
+    expect(snapshot.stats.find(p=>p.id === "avneet")).toMatchObject({points:10,games:1});
+    expect(first.roster.filter(p=>p.outsider)).toHaveLength(2);
+    expect(second.roster.filter(p=>p.outsider)).toEqual([{id:"g2-unc-2",player_id:null,team:"A",outsider:true}]);
   });
   it("filters dates and players, and distinguishes teammates from opponents", () => {
     const empty = publishedRequest(data,"/snapshot?from=2026-08-01&to=2026-08-31") as Snapshot;
@@ -22,8 +28,11 @@ describe("published stats without a backend", () => {
     expect(selected.stats.map(s=>s.name)).toEqual(["Mandeep"]);
     expect(publishedRequest(data,"/games?pair=1&players=mandeep,saad")).toHaveLength(1);
     expect(publishedRequest(data,"/games?pair=1&players=mandeep,wilson")).toHaveLength(0);
-    expect(publishedRequest(data,"/players/wilson/history")).toHaveLength(1);
-    expect(publishedRequest(data,"/players/wilson/history?offset=1")).toHaveLength(0);
+    expect(publishedRequest(data,"/games?pair=1&players=mandeep,avneet")).toHaveLength(1);
+    expect(publishedRequest(data,"/players/wilson/history")).toHaveLength(2);
+    expect(publishedRequest(data,"/players/wilson/history?offset=1")).toHaveLength(1);
+    expect(publishedRequest(data,"/players/wilson/history?offset=2")).toHaveLength(0);
+    expect(publishedRequest(data,"/players/avneet/history")).toHaveLength(1);
   });
   it("paginates events and respects partial per-game coverage", () => {
     const first:any = publishedRequest(data,"/games/game-2026-09-11-1/events");
@@ -33,9 +42,26 @@ describe("published stats without a backend", () => {
     expect(new Set([...first.events,...second.events].map(e=>e.id)).size).toBe(173);
     expect(second.next).toBeNull();
     const snapshot = publishedRequest(data,"/snapshot?mode=per-game") as Snapshot;
-    expect(snapshot.stats.find(s=>s.id === "saad")?.points).toBe(15);
-    expect(snapshot.stats.every(s=>Number.isNaN(s.dreb))).toBe(true);
+    expect(snapshot.stats.find(s=>s.id === "saad")?.points).toBe(10.5);
+    expect(snapshot.stats.find(s=>s.id === "mandeep")?.dreb).toBe(2);
+    expect(snapshot.stats.every(s=>Number.isNaN(s.oppAtt))).toBe(true);
     expect(()=>publishedRequest(data,"/owner/export")).toThrow("not enabled");
+  });
+  it("retains the reviewed Game 1 corrections and Game 2 possession rulings", () => {
+    const first = data.games.find(g=>g.id === "game-2026-09-11-1")!;
+    expect(first.revision).toBe(2);
+    expect(first.events.find(e=>e.id === "g1-e039")?.defenders).toEqual([]);
+    expect(first.events.find(e=>e.id === "g1-e111")?.defenders).toEqual(["chris"]);
+    const second = data.games.find(g=>g.id === "game-2026-09-11-2")!;
+    const stats = aggregate(gameRows(second), data.players);
+    expect(second.events).toHaveLength(117);
+    expect(second.events.filter(e=>e.type === "shot")).toHaveLength(63);
+    expect(stats.find(s=>s.id === "avneet")).toMatchObject({points:10,fgMade:5,fgAtt:11,assists:3,oreb:2,dreb:7,turnovers:2,steals:1});
+    expect(stats.find(s=>s.id === "mandeep")).toMatchObject({points:4,fgMade:2,fgAtt:10,oreb:4,dreb:2,turnovers:0,steals:0,deflections:2,oppMade:1,oppAtt:8});
+    expect(stats.find(s=>s.id === "saad")).toMatchObject({points:6,oreb:1,steals:3,deflections:1});
+    expect(stats.find(s=>s.id === "chris")).toMatchObject({oreb:1,turnovers:0,deflections:0,oppMade:5,oppAtt:10.5});
+    expect(stats.find(s=>s.id === "wilson")).toMatchObject({dreb:7,turnovers:2,steals:1});
+    expect(second.events.filter(e=>e.actor === "g2-unc-2" && e.made && e.defenders.includes("chris"))).toHaveLength(2);
   });
   it("rejects private fields and strips commentary on export", () => {
     expect(JSON.stringify(data)).not.toMatch(/"(?:source|transcript|OWNER_PASSPHRASE|FRIEND_ACCESS_CODE)"/);
