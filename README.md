@@ -1,6 +1,6 @@
 # Friday Hoops
 
-[Open the dashboard](https://mandeeepy.github.io/friday-hoops/) · Starts in labelled sample mode until the live backend is connected.
+[Open the dashboard](https://mandeeepy.github.io/friday-hoops/) · Real game stats hosted on GitHub Pages.
 
 A mobile-first basketball dashboard for a rotating Friday group. Three public tabs: Offense, Defense, Ask AI. Includes a separate owner workspace for reusable players, game rosters, AI preparation packs, validated imports, and revision restoration.
 
@@ -9,7 +9,11 @@ npm ci
 npm run dev
 ```
 
-Open the printed local URL with `?demo=1` for fictional sample games. For real data, follow [deployment and operations](docs/OPERATIONS.md). The API and all data stay on Cloudflare Worker + D1; the static app deploys to GitHub Pages. No DeepSeek key is needed to explore the sample dashboard.
+The published site reads sanitized game data from `public/stats.json`, with filters, player history, comparisons, and game logs calculated in the browser. GitHub Pages needs no separate backend or Cloudflare account. Website uploads and AI chat are disabled in this mode. Private transcripts and access codes stay out of the public repository.
+
+To publish a reviewed session, run `npm run stats:publish -- path/to/session.import.json`, review `public/stats.json`, then commit and push it. The export preserves existing games and rejects stale revisions. The Pages workflow builds with `VITE_STATIC_DATA=true`. To preview real data locally, run `VITE_STATIC_DATA=true npm run dev`.
+
+Open the local URL with `?demo=1` for fictional sample games. The optional Cloudflare API remains available for a future setup with browser uploads and AI; see [deployment and operations](docs/OPERATIONS.md). An explicitly configured `VITE_API_URL` takes precedence over the published file.
 
 - [Commentary and AI extraction SOP](docs/COMMENTARY-AND-AI.md)
 - [Operations, upload, correction, hosting and backup SOP](docs/OPERATIONS.md)

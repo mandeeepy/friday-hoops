@@ -25,6 +25,7 @@ jobs:
         env:
           BASE_PATH: /${{ github.event.repository.name }}/
           VITE_API_URL: ${{ vars.VITE_API_URL }}
+          VITE_STATIC_DATA: "true"
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
@@ -40,6 +41,8 @@ jobs:
       - run: npm ci
       - run: npx playwright install --with-deps chromium firefox webkit
       - run: npm run test:e2e
+        env:
+          VITE_STATIC_DATA: "true"
       - uses: actions/upload-artifact@v4
         if: failure()
         with:

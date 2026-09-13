@@ -1,5 +1,12 @@
 # Verification record
 
+## GitHub Pages published-data mode — September 14, 2026
+- 28 passing unit/contract/database tests, including real September 11 totals, date/player filters, teammate versus opponent filters, play pagination, partial coverage, private-field exclusion, duplicate imports and correction revisions.
+- Production TypeScript/Vite build passes with `VITE_STATIC_DATA=true` and the `/friday-hoops/` base path.
+- In-app browser production preview shows the six real players, Saad's 15 points, the 21–27 game score, anonymous guests, and all 173 public play records. Private source commentary is excluded from the public file.
+- Local Playwright binaries are not installed. The GitHub deployment workflow installs them and runs the existing desktop/mobile suite plus the published-data test before deploying.
+- The public site now has a GitHub Pages data mode that needs no Cloudflare backend. Website uploads and AI chat show clear unavailable messages in this mode. The older optional backend verification below remains applicable to local/API mode.
+
 ## Completed locally
 - Strict TypeScript compilation and Vite production build.
 - 24 passing automated tests covering scoring, weighted defense, outsider context, completeness denominators, player identities, date boundaries, validation, SQL publication, revisions, rollback, backups, auth roles and concurrent budget reservations.

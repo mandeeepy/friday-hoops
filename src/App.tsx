@@ -46,7 +46,7 @@ import {
   today,
   type Period,
 } from "../shared/dates";
-import { request, qs, demoSnapshot, type Meta, type Snapshot } from "./api";
+import { request, qs, demoSnapshot, STATIC_DATA, type Meta, type Snapshot } from "./api";
 import type { Filters, Stats, Player, GameRecord } from "../shared/model";
 const PlayerHistory = lazy(() => import("./PlayerHistory"));
 const Manage = lazy(() => import("./Manage"));
@@ -117,7 +117,7 @@ export default function App() {
   const [players, setPlayers] = useState<Player[]>([]);
   const [demo, setDemo] = useState(
     new URLSearchParams(location.search).get("demo") === "1" ||
-      (import.meta.env.PROD && !import.meta.env.VITE_API_URL),
+      (import.meta.env.PROD && !import.meta.env.VITE_API_URL && !STATIC_DATA),
   );
   const [status, setStatus] = useState("loading");
   const [error, setError] = useState("");
@@ -393,6 +393,13 @@ export default function App() {
       )}
       <main>
         {tab === "manage" ? (
+          STATIC_DATA && !demo ? (
+            <section className="empty">
+              <h2>Updating the stats</h2>
+              <p>New games and corrections are published by the owner. Uploads are not available on this website.</p>
+              <button className="secondary" onClick={() => changeTab("offense")}>Back to stats</button>
+            </section>
+          ) : (
           <Suspense fallback={<p>Loading manager…</p>}>
             <Manage
               demo={demo}
@@ -401,6 +408,7 @@ export default function App() {
               onPublish={() => setReload((r) => r + 1)}
             />
           </Suspense>
+          )
         ) : (
           <>
             <section className="page-heading">
@@ -608,6 +616,13 @@ export default function App() {
             {status === "loading" && !data ? (
               <div className="empty">Connecting to your court…</div>
             ) : tab === "ai" ? (
+              STATIC_DATA && !demo ? (
+                <section className="empty">
+                  <h2>Explore your stats</h2>
+                  <p>AI chat is not enabled on this site. Use the player filters, comparisons, and game history to explore your results.</p>
+                  <button className="secondary" onClick={() => changeTab("offense")}>View stats</button>
+                </section>
+              ) : (
               <Suspense fallback={<p>Loading AI…</p>}>
                 <Chat
                   filters={filters}
@@ -619,6 +634,7 @@ export default function App() {
                   }}
                 />
               </Suspense>
+              )
             ) : data ? (
               <>
                 {filters.players.length > 0 && (

@@ -1,6 +1,18 @@
 # Friday Hoops operating guide
 
 ## Architecture
+The current public site uses GitHub Pages only. It loads `public/stats.json` and uses the same shared statistics functions in the browser. No Cloudflare account is needed. `VITE_STATIC_DATA=true` enables this mode; `VITE_API_URL`, if set, selects the optional API instead. Explicit `?demo=1` still opens fictional sample data.
+
+### Publish on GitHub Pages
+1. Produce and review the complete import JSON using the commentary guide. Keep private imports and transcripts under ignored `data/`.
+2. Run `npm run stats:publish -- data/YYYY-MM-DD/game.import.json`. The exporter validates relationships, rejects stale revisions, removes private source commentary, merges games by ID, and keeps games omitted from the import.
+3. Review the generated `public/stats.json`. Run `npm test` and `VITE_STATIC_DATA=true npm run build`.
+4. Commit the public data and intended code changes, then push to `main`. The GitHub workflow builds and checks the site before deployment. Private transcripts, backups, and production access codes must never be committed.
+5. Open the published site and verify the latest date, players, and game score. For corrections use the game's current revision as `base_revision` and preserve event IDs.
+
+The published website supports public statistics, filters, teammate combinations, player history, and game logs. Website uploads and AI chat require the optional backend described below. Updating the published data is an owner operation in the local project.
+
+### Optional backend
 React/TypeScript/Vite on GitHub Pages; a Cloudflare Worker exposes `/api`; D1 stores players, sessions, games, participants, plays, shot defenders, derived player-game rows, import history, and revisions. All statistics and AI tools use `shared/stats.ts`. Browsers never receive database credentials or the DeepSeek key. Outsider identities are anonymous within each roster. Public visitors may read all published statistics and game logs; source commentary and old imports are owner-only.
 
 ## Weekly recording
