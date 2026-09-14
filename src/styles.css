@@ -1937,3 +1937,30 @@ footer > span:last-child,
     overflow-wrap: anywhere;
   }
 }
+
+.game-tabs {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 16px;
+  border-bottom: 1px solid #294151;
+}
+.game-tabs button {
+  flex: 0 0 auto;
+  padding: 10px 16px;
+  border: 1px solid #355060;
+  border-radius: 10px;
+  color: #dceaf2;
+  background: #102330;
+}
+.game-tabs button[aria-pressed="true"] {
+  background: #ff8845;
+  color: #102330;
+  border-color: #ff8845;
+  font-weight: 700;
+}
+.game-tabs small { display: block; margin-top: 4px; font-size: 11px; }
+.game-stat-context { padding: 16px 20px 0; }
+.game-stat-context p { color: #91abba; font-size: 13px; }
+.leaderboard.game-selected > .table-scroll { display: block; }
+.leaderboard.game-selected > .mobile-players { display: none; }

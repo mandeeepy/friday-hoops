@@ -96,9 +96,9 @@ function parse() {
     from: p.get("from") || "",
     to: p.get("to") || "",
     players: p.get("players")?.split(",").filter(Boolean) || [],
-    mode: (p.get("mode") === "per-game"
-      ? "per-game"
-      : "totals") as Filters["mode"],
+    mode: (p.get("mode") === "totals"
+      ? "totals"
+      : "per-game") as Filters["mode"],
     detail: p.get("player") || "",
     game: p.get("game") || "",
   };
@@ -132,6 +132,27 @@ export default function App() {
   const [reload, setReload] = useState(0);
   const [pairAsc, setPairAsc] = useState(false);
   const [pairGames, setPairGames] = useState<string[] | null>(null);
+  const [statsGameId, setStatsGameId] = useState("");
+  const [statsGame, setStatsGame] = useState<GameRecord | null>(null);
+  const [statsGameError, setStatsGameError] = useState("");
+  useEffect(() => {
+    setStatsGameId("");
+  }, [filters.from, filters.to, filters.players.join(","), demo]);
+  useEffect(() => {
+    let cancelled = false;
+    setStatsGame(null);
+    setStatsGameError("");
+    if (!statsGameId) return;
+    (demo
+      ? Promise.resolve(demoGames.find((g) => g.id === statsGameId) || null)
+      : request<GameRecord>(`/games/${encodeURIComponent(statsGameId)}`)
+    ).then((g) => {
+      if (!cancelled) setStatsGame(g);
+    }).catch((e) => {
+      if (!cancelled) setStatsGameError(e.message);
+    });
+    return () => { cancelled = true; };
+  }, [statsGameId, demo]);
   useEffect(() => {
     let cancelled = false;
     async function load() {
@@ -276,6 +297,7 @@ export default function App() {
       }));
   }
   const reset = () => {
+    setStatsGameId("");
     setFilters((f) => ({
       ...f,
       players: [],
@@ -285,7 +307,7 @@ export default function App() {
     setSearch("");
     setPairGames(null);
   };
-  const filtered = (data?.stats || [])
+  const rankStats = (stats: Stats[]) => stats
     .filter((s) => s.name.toLowerCase().includes(search.toLowerCase()))
     .sort((a, b) => {
       const av =
@@ -302,12 +324,25 @@ export default function App() {
           : 1) || a.name.localeCompare(b.name)
       );
     });
+  const filtered = rankStats(data?.stats || []);
+  const gameStats = statsGame && statsGame.id === statsGameId
+    ? aggregate(gameRows(statsGame), players, "totals").filter((s) =>
+        !filters.players.length || filters.players.includes(s.id))
+    : [];
+  const leaderboardStats = statsGameId ? rankStats(gameStats) : filtered;
+  const gameTabs = [...(data?.games || [])].sort((a, b) =>
+    a.date.localeCompare(b.date) || a.label.localeCompare(b.label, undefined, { numeric: true }) || a.id.localeCompare(b.id));
   const totals = (key: keyof Stats) =>
     (data?.stats || []).reduce((n, s) => n + (Number(s[key]) || 0), 0);
-  const tableCols = tab === "defense" ? defenseColumns : columns;
+  const tableCols = (statsGameId ? [...columns, ...defenseColumns] : tab === "defense" ? defenseColumns : columns).map((column) =>
+    column.key === "points" && !statsGameId && filters.mode === "per-game"
+      ? { ...column, name: "PPG", help: "Points per game" }
+      : column,
+  );
   const leader = filtered[0];
-  const selected = data?.stats.find((s) => s.id === detail),
-    comparison = data?.stats.find((s) => s.id === compare);
+  const detailStats = statsGameId ? gameStats : data?.stats;
+  const selected = detailStats?.find((s) => s.id === detail),
+    comparison = detailStats?.find((s) => s.id === compare);
   const openPlayer = (id: string) => {
     setFilters((f) => ({
       ...f,
@@ -319,10 +354,12 @@ export default function App() {
     if (entry?.id) setFilters((f) => ({ ...f, players: [entry.id] }));
   };
   function downloadStats() {
-    const cols = [...columns, ...defenseColumns];
+    const cols = [...columns, ...defenseColumns].map((c) =>
+      c.key === "points" && !statsGameId && filters.mode === "per-game"
+        ? { ...c, name: "PPG" } : c);
     const csv = [
       ["Player", "Games", ...cols.map((c) => c.name)],
-      ...filtered.map((s) => [
+      ...leaderboardStats.map((s) => [
         s.name,
         s.games,
         ...cols.map((c) => fnum(s[c.key] as number | null)),
@@ -734,14 +771,32 @@ export default function App() {
                     {tab === "offense"
                       ? "Offensive leaders"
                       : "Defensive leaders"}
-                    <span>{data.stats.length} PLAYERS</span>
+                    <span>{statsGameId ? gameStats.length : data.stats.length} PLAYERS</span>
                   </h2>
                   <button className="text-button" onClick={downloadStats}>
                     <Download size={15} />
                     Export CSV
                   </button>
                 </div>
-                <section className="panel leaderboard">
+                <section className={`panel leaderboard${statsGameId ? " game-selected" : ""}`}>
+                  <div className="game-tabs" role="group" aria-label="Game statistics">
+                    <button aria-pressed={!statsGameId} onClick={() => setStatsGameId("")}>
+                      {filters.mode === "per-game" ? "Per game averages" : "All games totals"}
+                    </button>
+                    {gameTabs.map((g) => (
+                      <button key={g.id} aria-pressed={statsGameId === g.id} onClick={() => setStatsGameId(g.id)}>
+                        {g.label}<small>{prettyDate(g.date)}</small>
+                      </button>
+                    ))}
+                    {data.games.length < data.totalGames && <button onClick={loadOlderGames}>More games</button>}
+                  </div>
+                  {statsGameId && <div className="game-stat-context">
+                    {statsGameError ? <p role="alert">{statsGameError}</p> : statsGame?.id === statsGameId ? <>
+                      <strong>{statsGame.label} · {prettyDate(statsGame.date)}</strong>
+                      <p>Individual game stats · Scroll across for shooting, assists, rebounds, turnovers and defense.</p>
+                      <button className="text-button" onClick={() => setGameId(statsGameId)}>View teams and play log</button>
+                    </> : <p role="status">Loading game stats…</p>}
+                  </div>}
                   <div className="panel-tools">
                     <div className="search">
                       <Search size={16} />
@@ -805,7 +860,7 @@ export default function App() {
                         </tr>
                       </thead>
                       <tbody>
-                        {filtered.map((s, i) => (
+                        {leaderboardStats.map((s, i) => (
                           <tr key={s.id}>
                             <td className="rank">
                               {String(i + 1).padStart(2, "0")}
@@ -851,7 +906,7 @@ export default function App() {
                     </table>
                   </div>
                   <div className="mobile-players">
-                    {filtered.map((s, i) => (
+                    {leaderboardStats.map((s, i) => (
                       <button
                         key={s.id}
                         className="mobile-player"
@@ -884,7 +939,7 @@ export default function App() {
                       </button>
                     ))}
                   </div>
-                  {!filtered.length && (
+                  {!leaderboardStats.length && (!statsGameId || statsGame?.id === statsGameId) && (
                     <div className="empty">
                       No players in this range.{" "}
                       <button onClick={reset}>Reset filters</button>
@@ -892,7 +947,7 @@ export default function App() {
                   )}
                   <div className="panel-foot">
                     <Info size={13} />
-                    {filters.mode === "per-game"
+                    {statsGameId ? "Recorded stats for this game only. * indicates partial tracking." : filters.mode === "per-game"
                       ? "Averages include only games with complete tracking for each statistic."
                       : "Tap a player to explore their games. All counts come from recorded plays."}
                   </div>
@@ -1434,8 +1489,8 @@ export default function App() {
           {selected ? (
             <>
               <p>
-                {selected.games} games · {prettyDate(filters.from)} –{" "}
-                {prettyDate(filters.to)}
+                {statsGameId && statsGame ? `${statsGame.label} · ${prettyDate(statsGame.date)}` :
+                  `${selected.games} games · ${prettyDate(filters.from)} – ${prettyDate(filters.to)}`}
               </p>
               <div className="table-scroll">
                 <table>
