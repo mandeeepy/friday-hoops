@@ -1,6 +1,6 @@
 {
-  "version": 3,
-  "updated_at": "2026-09-13T17:48:40.409Z",
+  "version": 4,
+  "updated_at": "2026-09-14T12:30:35.201Z",
   "players": [
     {
       "id": "avneet",
@@ -20,6 +20,11 @@
     {
       "id": "mandeep",
       "name": "Mandeep",
+      "aliases": []
+    },
+    {
+      "id": "raman",
+      "name": "Raman",
       "aliases": []
     },
     {
@@ -2879,6 +2884,1582 @@
           "assist": "avneet",
           "defenders": [
             "saad"
+          ]
+        }
+      ],
+      "date": "2026-09-11",
+      "session_id": "session-2026-09-11",
+      "revision": 1
+    },
+    {
+      "id": "game-2026-09-11-3",
+      "label": "Game 3",
+      "base_revision": 0,
+      "completed": true,
+      "scoring_complete": true,
+      "coverage": {
+        "shooting": true,
+        "assists": true,
+        "oreb": false,
+        "turnovers": true,
+        "defense": false,
+        "deflections": true,
+        "steals": true,
+        "blocks": true,
+        "dreb": false
+      },
+      "roster": [
+        {
+          "id": "mandeep",
+          "player_id": "mandeep",
+          "team": "A",
+          "outsider": false
+        },
+        {
+          "id": "raman",
+          "player_id": "raman",
+          "team": "A",
+          "outsider": false
+        },
+        {
+          "id": "saad",
+          "player_id": "saad",
+          "team": "A",
+          "outsider": false
+        },
+        {
+          "id": "wilson",
+          "player_id": "wilson",
+          "team": "A",
+          "outsider": false
+        },
+        {
+          "id": "baljeet",
+          "player_id": "baljeet",
+          "team": "B",
+          "outsider": false
+        },
+        {
+          "id": "avneet",
+          "player_id": "avneet",
+          "team": "B",
+          "outsider": false
+        },
+        {
+          "id": "chris",
+          "player_id": "chris",
+          "team": "B",
+          "outsider": false
+        },
+        {
+          "id": "g3-unc-2",
+          "player_id": null,
+          "team": "B",
+          "outsider": true
+        }
+      ],
+      "events": [
+        {
+          "id": "g3-e001",
+          "sequence": 1,
+          "type": "shot",
+          "actor": "saad",
+          "value": 2,
+          "made": true,
+          "assist": "wilson",
+          "defenders": [
+            "chris"
+          ]
+        },
+        {
+          "id": "g3-e003",
+          "sequence": 3,
+          "type": "shot",
+          "actor": "mandeep",
+          "value": 2,
+          "made": false,
+          "defenders": []
+        },
+        {
+          "id": "g3-e004",
+          "sequence": 4,
+          "type": "oreb",
+          "actor": "raman",
+          "defenders": [],
+          "related_event_id": "g3-e003"
+        },
+        {
+          "id": "g3-e005",
+          "sequence": 5,
+          "type": "shot",
+          "actor": "raman",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "chris",
+            "avneet"
+          ]
+        },
+        {
+          "id": "g3-e006",
+          "sequence": 6,
+          "type": "oreb",
+          "actor": "mandeep",
+          "defenders": [],
+          "related_event_id": "g3-e005"
+        },
+        {
+          "id": "g3-e007",
+          "sequence": 7,
+          "type": "shot",
+          "actor": "mandeep",
+          "value": 2,
+          "made": false,
+          "defenders": []
+        },
+        {
+          "id": "g3-e008",
+          "sequence": 8,
+          "type": "dreb",
+          "actor": "chris",
+          "defenders": [],
+          "related_event_id": "g3-e007"
+        },
+        {
+          "id": "g3-e009",
+          "sequence": 9,
+          "type": "shot",
+          "actor": "g3-unc-2",
+          "value": 2,
+          "made": true,
+          "defenders": [
+            "mandeep"
+          ]
+        },
+        {
+          "id": "g3-e010",
+          "sequence": 10,
+          "type": "shot",
+          "actor": "chris",
+          "value": 3,
+          "made": false,
+          "defenders": [
+            "mandeep"
+          ]
+        },
+        {
+          "id": "g3-e011",
+          "sequence": 11,
+          "type": "dreb",
+          "actor": "mandeep",
+          "defenders": [],
+          "related_event_id": "g3-e010"
+        },
+        {
+          "id": "g3-e012",
+          "sequence": 12,
+          "type": "shot",
+          "actor": "wilson",
+          "value": 3,
+          "made": true,
+          "assist": "raman",
+          "defenders": [
+            "g3-unc-2"
+          ]
+        },
+        {
+          "id": "g3-e014",
+          "sequence": 14,
+          "type": "shot",
+          "actor": "raman",
+          "value": 2,
+          "made": true,
+          "assist": "mandeep",
+          "defenders": [
+            "avneet"
+          ],
+          "video_seconds": 127
+        },
+        {
+          "id": "g3-e015",
+          "sequence": 15,
+          "type": "shot",
+          "actor": "saad",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "avneet"
+          ]
+        },
+        {
+          "id": "g3-e016",
+          "sequence": 16,
+          "type": "block",
+          "actor": "avneet",
+          "defenders": [],
+          "related_event_id": "g3-e015"
+        },
+        {
+          "id": "g3-e017",
+          "sequence": 17,
+          "type": "dreb",
+          "actor": "avneet",
+          "defenders": [],
+          "related_event_id": "g3-e015"
+        },
+        {
+          "id": "g3-e018",
+          "sequence": 18,
+          "type": "shot",
+          "actor": "avneet",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "raman"
+          ]
+        },
+        {
+          "id": "g3-e020",
+          "sequence": 20,
+          "type": "turnover",
+          "actor": "avneet",
+          "defenders": []
+        },
+        {
+          "id": "g3-e021",
+          "sequence": 21,
+          "type": "steal",
+          "actor": "wilson",
+          "defenders": [],
+          "related_event_id": "g3-e020"
+        },
+        {
+          "id": "g3-e022",
+          "sequence": 22,
+          "type": "shot",
+          "actor": "raman",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "avneet"
+          ]
+        },
+        {
+          "id": "g3-e024",
+          "sequence": 24,
+          "type": "shot",
+          "actor": "baljeet",
+          "value": 2,
+          "made": true,
+          "defenders": [
+            "saad"
+          ]
+        },
+        {
+          "id": "g3-e025",
+          "sequence": 25,
+          "type": "shot",
+          "actor": "chris",
+          "value": 3,
+          "made": false,
+          "defenders": [
+            "wilson"
+          ]
+        },
+        {
+          "id": "g3-e027",
+          "sequence": 27,
+          "type": "shot",
+          "actor": "wilson",
+          "value": 3,
+          "made": false,
+          "defenders": [
+            "g3-unc-2"
+          ]
+        },
+        {
+          "id": "g3-e029",
+          "sequence": 29,
+          "type": "shot",
+          "actor": "avneet",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "mandeep"
+          ]
+        },
+        {
+          "id": "g3-e030",
+          "sequence": 30,
+          "type": "dreb",
+          "actor": "saad",
+          "defenders": [],
+          "related_event_id": "g3-e029"
+        },
+        {
+          "id": "g3-e031",
+          "sequence": 31,
+          "type": "shot",
+          "actor": "raman",
+          "value": 2,
+          "made": true,
+          "assist": "wilson",
+          "defenders": [
+            "chris"
+          ]
+        },
+        {
+          "id": "g3-e032",
+          "sequence": 32,
+          "type": "shot",
+          "actor": "saad",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "baljeet"
+          ]
+        },
+        {
+          "id": "g3-e034",
+          "sequence": 34,
+          "type": "shot",
+          "actor": "mandeep",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "chris"
+          ]
+        },
+        {
+          "id": "g3-e037",
+          "sequence": 37,
+          "type": "steal",
+          "actor": "raman",
+          "defenders": []
+        },
+        {
+          "id": "g3-e038",
+          "sequence": 38,
+          "type": "deflection",
+          "actor": "raman",
+          "defenders": []
+        },
+        {
+          "id": "g3-e039",
+          "sequence": 39,
+          "type": "shot",
+          "actor": "mandeep",
+          "value": 3,
+          "made": true,
+          "assist": "raman",
+          "defenders": []
+        },
+        {
+          "id": "g3-e040",
+          "sequence": 40,
+          "type": "turnover",
+          "actor": "raman",
+          "defenders": []
+        },
+        {
+          "id": "g3-e041",
+          "sequence": 41,
+          "type": "steal",
+          "actor": "baljeet",
+          "defenders": [],
+          "related_event_id": "g3-e040"
+        },
+        {
+          "id": "g3-e042",
+          "sequence": 42,
+          "type": "deflection",
+          "actor": "baljeet",
+          "defenders": []
+        },
+        {
+          "id": "g3-e043",
+          "sequence": 43,
+          "type": "shot",
+          "actor": "avneet",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "mandeep"
+          ]
+        },
+        {
+          "id": "g3-e044",
+          "sequence": 44,
+          "type": "dreb",
+          "actor": "wilson",
+          "defenders": [],
+          "related_event_id": "g3-e043"
+        },
+        {
+          "id": "g3-e045",
+          "sequence": 45,
+          "type": "shot",
+          "actor": "saad",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "avneet"
+          ]
+        },
+        {
+          "id": "g3-e046",
+          "sequence": 46,
+          "type": "oreb",
+          "actor": "mandeep",
+          "defenders": [],
+          "related_event_id": "g3-e045"
+        },
+        {
+          "id": "g3-e047",
+          "sequence": 47,
+          "type": "shot",
+          "actor": "raman",
+          "value": 2,
+          "made": false,
+          "defenders": []
+        },
+        {
+          "id": "g3-e048",
+          "sequence": 48,
+          "type": "dreb",
+          "actor": "avneet",
+          "defenders": [],
+          "related_event_id": "g3-e047"
+        },
+        {
+          "id": "g3-e049",
+          "sequence": 49,
+          "type": "shot",
+          "actor": "avneet",
+          "value": 2,
+          "made": true,
+          "defenders": [
+            "mandeep"
+          ]
+        },
+        {
+          "id": "g3-e050",
+          "sequence": 50,
+          "type": "shot",
+          "actor": "baljeet",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "wilson"
+          ]
+        },
+        {
+          "id": "g3-e051",
+          "sequence": 51,
+          "type": "dreb",
+          "actor": "saad",
+          "defenders": [],
+          "related_event_id": "g3-e050"
+        },
+        {
+          "id": "g3-e052",
+          "sequence": 52,
+          "type": "shot",
+          "actor": "mandeep",
+          "value": 2,
+          "made": true,
+          "assist": "saad",
+          "defenders": [
+            "chris"
+          ]
+        },
+        {
+          "id": "g3-e053",
+          "sequence": 53,
+          "type": "shot",
+          "actor": "mandeep",
+          "value": 3,
+          "made": false,
+          "defenders": [
+            "chris"
+          ]
+        },
+        {
+          "id": "g3-e054",
+          "sequence": 54,
+          "type": "dreb",
+          "actor": "avneet",
+          "defenders": [],
+          "related_event_id": "g3-e053"
+        },
+        {
+          "id": "g3-e055",
+          "sequence": 55,
+          "type": "shot",
+          "actor": "chris",
+          "value": 3,
+          "made": false,
+          "defenders": []
+        },
+        {
+          "id": "g3-e056",
+          "sequence": 56,
+          "type": "dreb",
+          "actor": "raman",
+          "defenders": [],
+          "related_event_id": "g3-e055"
+        },
+        {
+          "id": "g3-e057",
+          "sequence": 57,
+          "type": "deflection",
+          "actor": "chris",
+          "defenders": []
+        },
+        {
+          "id": "g3-e058",
+          "sequence": 58,
+          "type": "shot",
+          "actor": "saad",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "chris"
+          ]
+        },
+        {
+          "id": "g3-e059",
+          "sequence": 59,
+          "type": "dreb",
+          "actor": "avneet",
+          "defenders": [],
+          "related_event_id": "g3-e058"
+        },
+        {
+          "id": "g3-e060",
+          "sequence": 60,
+          "type": "turnover",
+          "actor": "baljeet",
+          "defenders": []
+        },
+        {
+          "id": "g3-e061",
+          "sequence": 61,
+          "type": "shot",
+          "actor": "raman",
+          "value": 3,
+          "made": false,
+          "defenders": [
+            "chris"
+          ]
+        },
+        {
+          "id": "g3-e062",
+          "sequence": 62,
+          "type": "oreb",
+          "actor": "saad",
+          "defenders": [],
+          "related_event_id": "g3-e061"
+        },
+        {
+          "id": "g3-e063",
+          "sequence": 63,
+          "type": "shot",
+          "actor": "raman",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "chris"
+          ]
+        },
+        {
+          "id": "g3-e064",
+          "sequence": 64,
+          "type": "dreb",
+          "actor": "avneet",
+          "defenders": [],
+          "related_event_id": "g3-e063"
+        },
+        {
+          "id": "g3-e066",
+          "sequence": 66,
+          "type": "shot",
+          "actor": "g3-unc-2",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "raman"
+          ]
+        },
+        {
+          "id": "g3-e068",
+          "sequence": 68,
+          "type": "shot",
+          "actor": "raman",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "avneet"
+          ]
+        },
+        {
+          "id": "g3-e069",
+          "sequence": 69,
+          "type": "oreb",
+          "actor": "mandeep",
+          "defenders": [],
+          "related_event_id": "g3-e068"
+        },
+        {
+          "id": "g3-e070",
+          "sequence": 70,
+          "type": "shot",
+          "actor": "baljeet",
+          "value": 3,
+          "made": false,
+          "defenders": []
+        },
+        {
+          "id": "g3-e071",
+          "sequence": 71,
+          "type": "dreb",
+          "actor": "raman",
+          "defenders": [],
+          "related_event_id": "g3-e070"
+        },
+        {
+          "id": "g3-e072",
+          "sequence": 72,
+          "type": "shot",
+          "actor": "mandeep",
+          "value": 2,
+          "made": true,
+          "assist": "wilson",
+          "defenders": [
+            "baljeet"
+          ]
+        },
+        {
+          "id": "g3-e074",
+          "sequence": 74,
+          "type": "shot",
+          "actor": "mandeep",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "g3-unc-2"
+          ]
+        },
+        {
+          "id": "g3-e076",
+          "sequence": 76,
+          "type": "shot",
+          "actor": "chris",
+          "value": 3,
+          "made": false,
+          "defenders": []
+        },
+        {
+          "id": "g3-e077",
+          "sequence": 77,
+          "type": "dreb",
+          "actor": "mandeep",
+          "defenders": [],
+          "related_event_id": "g3-e076"
+        },
+        {
+          "id": "g3-e078",
+          "sequence": 78,
+          "type": "shot",
+          "actor": "saad",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "avneet"
+          ]
+        },
+        {
+          "id": "g3-e079",
+          "sequence": 79,
+          "type": "dreb",
+          "actor": "avneet",
+          "defenders": [],
+          "related_event_id": "g3-e078"
+        },
+        {
+          "id": "g3-e080",
+          "sequence": 80,
+          "type": "shot",
+          "actor": "avneet",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "mandeep"
+          ]
+        },
+        {
+          "id": "g3-e081",
+          "sequence": 81,
+          "type": "dreb",
+          "actor": "saad",
+          "defenders": [],
+          "related_event_id": "g3-e080"
+        },
+        {
+          "id": "g3-e082",
+          "sequence": 82,
+          "type": "turnover",
+          "actor": "raman",
+          "defenders": []
+        },
+        {
+          "id": "g3-e083",
+          "sequence": 83,
+          "type": "steal",
+          "actor": "baljeet",
+          "defenders": [],
+          "related_event_id": "g3-e082"
+        },
+        {
+          "id": "g3-e084",
+          "sequence": 84,
+          "type": "shot",
+          "actor": "baljeet",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "raman"
+          ]
+        },
+        {
+          "id": "g3-e085",
+          "sequence": 85,
+          "type": "oreb",
+          "actor": "baljeet",
+          "defenders": [],
+          "related_event_id": "g3-e084"
+        },
+        {
+          "id": "g3-e086",
+          "sequence": 86,
+          "type": "shot",
+          "actor": "baljeet",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "mandeep"
+          ]
+        },
+        {
+          "id": "g3-e087",
+          "sequence": 87,
+          "type": "oreb",
+          "actor": "avneet",
+          "defenders": [],
+          "related_event_id": "g3-e086"
+        },
+        {
+          "id": "g3-e089",
+          "sequence": 89,
+          "type": "shot",
+          "actor": "g3-unc-2",
+          "value": 2,
+          "made": true,
+          "assist": "avneet",
+          "defenders": [
+            "saad"
+          ]
+        },
+        {
+          "id": "g3-e090",
+          "sequence": 90,
+          "type": "shot",
+          "actor": "avneet",
+          "value": 3,
+          "made": true,
+          "defenders": [
+            "mandeep"
+          ]
+        },
+        {
+          "id": "g3-e091",
+          "sequence": 91,
+          "type": "shot",
+          "actor": "avneet",
+          "value": 3,
+          "made": true,
+          "defenders": [
+            "raman"
+          ]
+        },
+        {
+          "id": "g3-e093",
+          "sequence": 93,
+          "type": "shot",
+          "actor": "avneet",
+          "value": 3,
+          "made": false,
+          "defenders": [
+            "raman"
+          ]
+        },
+        {
+          "id": "g3-e094",
+          "sequence": 94,
+          "type": "dreb",
+          "actor": "mandeep",
+          "defenders": [],
+          "related_event_id": "g3-e093"
+        },
+        {
+          "id": "g3-e095",
+          "sequence": 95,
+          "type": "shot",
+          "actor": "raman",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "avneet"
+          ]
+        },
+        {
+          "id": "g3-e097",
+          "sequence": 97,
+          "type": "shot",
+          "actor": "g3-unc-2",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "saad"
+          ]
+        },
+        {
+          "id": "g3-e098",
+          "sequence": 98,
+          "type": "oreb",
+          "actor": "baljeet",
+          "defenders": [],
+          "related_event_id": "g3-e097"
+        },
+        {
+          "id": "g3-e099",
+          "sequence": 99,
+          "type": "shot",
+          "actor": "g3-unc-2",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "saad"
+          ]
+        },
+        {
+          "id": "g3-e100",
+          "sequence": 100,
+          "type": "dreb",
+          "actor": "wilson",
+          "defenders": [],
+          "related_event_id": "g3-e099"
+        },
+        {
+          "id": "g3-e101",
+          "sequence": 101,
+          "type": "shot",
+          "actor": "wilson",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "chris"
+          ]
+        },
+        {
+          "id": "g3-e102",
+          "sequence": 102,
+          "type": "oreb",
+          "actor": "wilson",
+          "defenders": [],
+          "related_event_id": "g3-e101"
+        },
+        {
+          "id": "g3-e103",
+          "sequence": 103,
+          "type": "shot",
+          "actor": "saad",
+          "value": 2,
+          "made": true,
+          "assist": "wilson",
+          "defenders": []
+        },
+        {
+          "id": "g3-e105",
+          "sequence": 105,
+          "type": "shot",
+          "actor": "raman",
+          "value": 2,
+          "made": true,
+          "assist": "saad",
+          "defenders": [
+            "avneet"
+          ]
+        },
+        {
+          "id": "g3-e106",
+          "sequence": 106,
+          "type": "shot",
+          "actor": "raman",
+          "value": 2,
+          "made": false,
+          "defenders": []
+        },
+        {
+          "id": "g3-e107",
+          "sequence": 107,
+          "type": "dreb",
+          "actor": "chris",
+          "defenders": [],
+          "related_event_id": "g3-e106"
+        },
+        {
+          "id": "g3-e108",
+          "sequence": 108,
+          "type": "shot",
+          "actor": "chris",
+          "value": 3,
+          "made": false,
+          "defenders": [
+            "wilson"
+          ]
+        },
+        {
+          "id": "g3-e110",
+          "sequence": 110,
+          "type": "shot",
+          "actor": "g3-unc-2",
+          "value": 2,
+          "made": true,
+          "defenders": []
+        },
+        {
+          "id": "g3-e112",
+          "sequence": 112,
+          "type": "shot",
+          "actor": "chris",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "saad"
+          ]
+        },
+        {
+          "id": "g3-e113",
+          "sequence": 113,
+          "type": "dreb",
+          "actor": "saad",
+          "defenders": [],
+          "related_event_id": "g3-e112"
+        },
+        {
+          "id": "g3-e114",
+          "sequence": 114,
+          "type": "shot",
+          "actor": "saad",
+          "value": 2,
+          "made": true,
+          "defenders": [
+            "chris"
+          ]
+        },
+        {
+          "id": "g3-e116",
+          "sequence": 116,
+          "type": "shot",
+          "actor": "raman",
+          "value": 2,
+          "made": true,
+          "assist": "saad",
+          "defenders": [
+            "avneet"
+          ]
+        },
+        {
+          "id": "g3-e117",
+          "sequence": 117,
+          "type": "shot",
+          "actor": "mandeep",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "chris"
+          ]
+        },
+        {
+          "id": "g3-e118",
+          "sequence": 118,
+          "type": "dreb",
+          "actor": "avneet",
+          "defenders": [],
+          "related_event_id": "g3-e117"
+        },
+        {
+          "id": "g3-e119",
+          "sequence": 119,
+          "type": "shot",
+          "actor": "avneet",
+          "value": 2,
+          "made": true,
+          "defenders": [
+            "raman"
+          ]
+        },
+        {
+          "id": "g3-e120",
+          "sequence": 120,
+          "type": "turnover",
+          "actor": "chris",
+          "defenders": []
+        },
+        {
+          "id": "g3-e121",
+          "sequence": 121,
+          "type": "steal",
+          "actor": "wilson",
+          "defenders": [],
+          "related_event_id": "g3-e120"
+        },
+        {
+          "id": "g3-e122",
+          "sequence": 122,
+          "type": "shot",
+          "actor": "wilson",
+          "value": 3,
+          "made": false,
+          "defenders": []
+        },
+        {
+          "id": "g3-e123",
+          "sequence": 123,
+          "type": "dreb",
+          "actor": "avneet",
+          "defenders": [],
+          "related_event_id": "g3-e122"
+        },
+        {
+          "id": "g3-e124",
+          "sequence": 124,
+          "type": "shot",
+          "actor": "avneet",
+          "value": 3,
+          "made": false,
+          "defenders": [
+            "mandeep"
+          ]
+        },
+        {
+          "id": "g3-e126",
+          "sequence": 126,
+          "type": "shot",
+          "actor": "g3-unc-2",
+          "value": 2,
+          "made": true,
+          "defenders": [
+            "saad"
+          ]
+        },
+        {
+          "id": "g3-e127",
+          "sequence": 127,
+          "type": "shot",
+          "actor": "baljeet",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "saad"
+          ]
+        },
+        {
+          "id": "g3-e128",
+          "sequence": 128,
+          "type": "oreb",
+          "actor": "baljeet",
+          "defenders": [],
+          "related_event_id": "g3-e127"
+        },
+        {
+          "id": "g3-e129",
+          "sequence": 129,
+          "type": "shot",
+          "actor": "baljeet",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "saad"
+          ]
+        },
+        {
+          "id": "g3-e130",
+          "sequence": 130,
+          "type": "dreb",
+          "actor": "wilson",
+          "defenders": [],
+          "related_event_id": "g3-e129"
+        },
+        {
+          "id": "g3-e131",
+          "sequence": 131,
+          "type": "shot",
+          "actor": "wilson",
+          "value": 3,
+          "made": false,
+          "defenders": [
+            "baljeet"
+          ]
+        },
+        {
+          "id": "g3-e132",
+          "sequence": 132,
+          "type": "dreb",
+          "actor": "avneet",
+          "defenders": [],
+          "related_event_id": "g3-e131"
+        },
+        {
+          "id": "g3-e133",
+          "sequence": 133,
+          "type": "shot",
+          "actor": "g3-unc-2",
+          "value": 2,
+          "made": false,
+          "defenders": []
+        },
+        {
+          "id": "g3-e134",
+          "sequence": 134,
+          "type": "dreb",
+          "actor": "saad",
+          "defenders": [],
+          "related_event_id": "g3-e133"
+        },
+        {
+          "id": "g3-e135",
+          "sequence": 135,
+          "type": "turnover",
+          "actor": "mandeep",
+          "defenders": []
+        },
+        {
+          "id": "g3-e136",
+          "sequence": 136,
+          "type": "steal",
+          "actor": "chris",
+          "defenders": [],
+          "related_event_id": "g3-e135"
+        },
+        {
+          "id": "g3-e137",
+          "sequence": 137,
+          "type": "deflection",
+          "actor": "chris",
+          "defenders": []
+        },
+        {
+          "id": "g3-e138",
+          "sequence": 138,
+          "type": "shot",
+          "actor": "g3-unc-2",
+          "value": 2,
+          "made": true,
+          "defenders": []
+        },
+        {
+          "id": "g3-e139",
+          "sequence": 139,
+          "type": "shot",
+          "actor": "avneet",
+          "value": 3,
+          "made": false,
+          "defenders": [
+            "mandeep"
+          ]
+        },
+        {
+          "id": "g3-e140",
+          "sequence": 140,
+          "type": "oreb",
+          "actor": "chris",
+          "defenders": [],
+          "related_event_id": "g3-e139"
+        },
+        {
+          "id": "g3-e142",
+          "sequence": 142,
+          "type": "shot",
+          "actor": "chris",
+          "value": 2,
+          "made": false,
+          "defenders": []
+        },
+        {
+          "id": "g3-e143",
+          "sequence": 143,
+          "type": "dreb",
+          "actor": "wilson",
+          "defenders": [],
+          "related_event_id": "g3-e142"
+        },
+        {
+          "id": "g3-e144",
+          "sequence": 144,
+          "type": "shot",
+          "actor": "raman",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "avneet"
+          ]
+        },
+        {
+          "id": "g3-e145",
+          "sequence": 145,
+          "type": "dreb",
+          "actor": "avneet",
+          "defenders": [],
+          "related_event_id": "g3-e144"
+        },
+        {
+          "id": "g3-e146",
+          "sequence": 146,
+          "type": "shot",
+          "actor": "avneet",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "mandeep"
+          ]
+        },
+        {
+          "id": "g3-e147",
+          "sequence": 147,
+          "type": "dreb",
+          "actor": "wilson",
+          "defenders": [],
+          "related_event_id": "g3-e146"
+        },
+        {
+          "id": "g3-e148",
+          "sequence": 148,
+          "type": "shot",
+          "actor": "raman",
+          "value": 2,
+          "made": true,
+          "assist": "wilson",
+          "defenders": [
+            "chris"
+          ]
+        },
+        {
+          "id": "g3-e149",
+          "sequence": 149,
+          "type": "turnover",
+          "actor": "saad",
+          "defenders": []
+        },
+        {
+          "id": "g3-e150",
+          "sequence": 150,
+          "type": "steal",
+          "actor": "chris",
+          "defenders": [],
+          "related_event_id": "g3-e149"
+        },
+        {
+          "id": "g3-e151",
+          "sequence": 151,
+          "type": "shot",
+          "actor": "chris",
+          "value": 3,
+          "made": false,
+          "defenders": []
+        },
+        {
+          "id": "g3-e152",
+          "sequence": 152,
+          "type": "dreb",
+          "actor": "saad",
+          "defenders": [],
+          "related_event_id": "g3-e151"
+        },
+        {
+          "id": "g3-e153",
+          "sequence": 153,
+          "type": "turnover",
+          "actor": "mandeep",
+          "defenders": []
+        },
+        {
+          "id": "g3-e156",
+          "sequence": 156,
+          "type": "shot",
+          "actor": "chris",
+          "value": 2,
+          "made": false,
+          "defenders": []
+        },
+        {
+          "id": "g3-e157",
+          "sequence": 157,
+          "type": "oreb",
+          "actor": "baljeet",
+          "defenders": [],
+          "related_event_id": "g3-e156"
+        },
+        {
+          "id": "g3-e158",
+          "sequence": 158,
+          "type": "shot",
+          "actor": "baljeet",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "wilson"
+          ]
+        },
+        {
+          "id": "g3-e159",
+          "sequence": 159,
+          "type": "dreb",
+          "actor": "mandeep",
+          "defenders": [],
+          "related_event_id": "g3-e158"
+        },
+        {
+          "id": "g3-e160",
+          "sequence": 160,
+          "type": "shot",
+          "actor": "saad",
+          "value": 3,
+          "made": false,
+          "defenders": []
+        },
+        {
+          "id": "g3-e161",
+          "sequence": 161,
+          "type": "oreb",
+          "actor": "mandeep",
+          "defenders": [],
+          "related_event_id": "g3-e160"
+        },
+        {
+          "id": "g3-e162",
+          "sequence": 162,
+          "type": "shot",
+          "actor": "raman",
+          "value": 3,
+          "made": false,
+          "defenders": []
+        },
+        {
+          "id": "g3-e163",
+          "sequence": 163,
+          "type": "dreb",
+          "actor": "chris",
+          "defenders": [],
+          "related_event_id": "g3-e162"
+        },
+        {
+          "id": "g3-e164",
+          "sequence": 164,
+          "type": "shot",
+          "actor": "chris",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "saad"
+          ]
+        },
+        {
+          "id": "g3-e165",
+          "sequence": 165,
+          "type": "oreb",
+          "actor": "chris",
+          "defenders": [],
+          "related_event_id": "g3-e164"
+        },
+        {
+          "id": "g3-e166",
+          "sequence": 166,
+          "type": "shot",
+          "actor": "avneet",
+          "value": 3,
+          "made": false,
+          "defenders": [
+            "mandeep"
+          ]
+        },
+        {
+          "id": "g3-e167",
+          "sequence": 167,
+          "type": "dreb",
+          "actor": "mandeep",
+          "defenders": [],
+          "related_event_id": "g3-e166"
+        },
+        {
+          "id": "g3-e168",
+          "sequence": 168,
+          "type": "shot",
+          "actor": "mandeep",
+          "value": 2,
+          "made": false,
+          "defenders": []
+        },
+        {
+          "id": "g3-e169",
+          "sequence": 169,
+          "type": "dreb",
+          "actor": "baljeet",
+          "defenders": [],
+          "related_event_id": "g3-e168"
+        },
+        {
+          "id": "g3-e170",
+          "sequence": 170,
+          "type": "shot",
+          "actor": "baljeet",
+          "value": 3,
+          "made": true,
+          "defenders": [
+            "wilson"
+          ]
+        },
+        {
+          "id": "g3-e172",
+          "sequence": 172,
+          "type": "steal",
+          "actor": "raman",
+          "defenders": []
+        },
+        {
+          "id": "g3-e174",
+          "sequence": 174,
+          "type": "shot",
+          "actor": "saad",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "g3-unc-2"
+          ]
+        },
+        {
+          "id": "g3-e175",
+          "sequence": 175,
+          "type": "dreb",
+          "actor": "baljeet",
+          "defenders": [],
+          "related_event_id": "g3-e174"
+        },
+        {
+          "id": "g3-e176",
+          "sequence": 176,
+          "type": "shot",
+          "actor": "g3-unc-2",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "raman"
+          ]
+        },
+        {
+          "id": "g3-e177",
+          "sequence": 177,
+          "type": "dreb",
+          "actor": "wilson",
+          "defenders": [],
+          "related_event_id": "g3-e176"
+        },
+        {
+          "id": "g3-e178",
+          "sequence": 178,
+          "type": "shot",
+          "actor": "wilson",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "chris"
+          ]
+        },
+        {
+          "id": "g3-e180",
+          "sequence": 180,
+          "type": "shot",
+          "actor": "raman",
+          "value": 2,
+          "made": true,
+          "assist": "wilson",
+          "defenders": []
+        },
+        {
+          "id": "g3-e181",
+          "sequence": 181,
+          "type": "turnover",
+          "actor": "raman",
+          "defenders": []
+        },
+        {
+          "id": "g3-e182",
+          "sequence": 182,
+          "type": "steal",
+          "actor": "avneet",
+          "defenders": [],
+          "related_event_id": "g3-e181"
+        },
+        {
+          "id": "g3-e183",
+          "sequence": 183,
+          "type": "shot",
+          "actor": "baljeet",
+          "value": 2,
+          "made": true,
+          "assist": "chris",
+          "defenders": []
+        },
+        {
+          "id": "g3-e184",
+          "sequence": 184,
+          "type": "shot",
+          "actor": "g3-unc-2",
+          "value": 2,
+          "made": true,
+          "assist": "avneet",
+          "defenders": []
+        },
+        {
+          "id": "g3-e185",
+          "sequence": 185,
+          "type": "shot",
+          "actor": "chris",
+          "value": 2,
+          "made": false,
+          "defenders": [
+            "wilson"
+          ]
+        },
+        {
+          "id": "g3-e186",
+          "sequence": 186,
+          "type": "dreb",
+          "actor": "wilson",
+          "defenders": [],
+          "related_event_id": "g3-e185"
+        },
+        {
+          "id": "g3-e187",
+          "sequence": 187,
+          "type": "shot",
+          "actor": "saad",
+          "value": 2,
+          "made": true,
+          "assist": "wilson",
+          "defenders": [
+            "g3-unc-2"
           ]
         }
       ],
